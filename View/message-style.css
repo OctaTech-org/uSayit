@@ -10,13 +10,13 @@ body {
 .back-button {
     background-color: white;
     width: 170px;
-    height: 50px;
+    height: 55px;
     margin-left: 25px;
     margin-top: 25px;
     border-radius: 15px;
     border: 5px solid #FFFFFF;
     background: linear-gradient(114.33deg, #DC92FF 0%, #9747FF 99.01%);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 2px 2px 5px #FFFFFF;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 1.5px 1.5px 5px #FFFFFF;
     backdrop-filter: blur(4px);
     text-align: center;
     transition: all 500ms ease-in;
@@ -26,7 +26,7 @@ body {
     color: #FFFFFF;
     font-family: 'Montserrat';
     font-size: 30px;
-    line-height: 50px;
+    line-height: 55px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
