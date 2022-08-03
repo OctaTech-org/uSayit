@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap');
 
 body {
-    background-image: url("material/background.svg");
+    background-image: url("material/background.jpg");
     background-size: cover;
     font-family: 'Montserrat';
     margin: 0;
@@ -42,6 +42,7 @@ body {
     background: linear-gradient(114.33deg, #9747FF 0%, #DC92FF 99.01%);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 10px rgba(0, 0, 0, 0.25);
     transition: all 300ms ease-out;
+    transform: scale(0.9);
 }
 
 .message {
@@ -115,7 +116,7 @@ body {
     border-radius: 50%;
 }
 
-.message > .container > .platform > .twt-button {
+.message > .container > .platform > #twt-button {
     background-color: #FFFFFF;
     border: 4px solid #3FA3FF;
     box-shadow: 5px 5px 10px rgba(63, 163, 255, 0.5), inset 5px 5px 10px rgba(255, 255, 255, 0.25);
@@ -125,13 +126,28 @@ body {
     width: 45px;
 }
 
-.message > .container > .platform > .twt-button > img {
+.message > .container > .platform > #twt-button > img {
     margin: auto;
     width: 30px;
     height: 30px;
 }
 
-.message > .container > .platform > .ig-button {
+.message > .container > .platform > #twt-button:hover {
+    cursor: pointer;
+    background-color: #3FA3FF;
+    border-color: #FFFFFF;
+    box-shadow: 5px 5px 10px rgba(63, 163, 255, 0.5), inset 5px 5px 10px rgba(0, 0, 0, 0.25);
+    transform: scale(1.2);
+    margin-top: -5px;
+    transition: transform 100ms ease-out;
+}
+
+.message > .container > .platform > #twt-button:hover img{
+    filter: brightness(0) invert(1) drop-shadow( 3px 3px 2px rgba(0, 0, 0, .2));;
+    animation: bounce 1.25s ease-out;
+}
+
+.message > .container > .platform > #ig-button {
     margin-left: 20px;
     background-color: #FFFFFF;
     border: 4px solid #E25B5B;
@@ -142,7 +158,7 @@ body {
     width: 45px;
 }
 
-.message > .container > .platform > .ig-button > img {
+.message > .container > .platform > #ig-button > img {
     margin: auto;
     width: 25px;
     height: 25px;
@@ -153,4 +169,21 @@ body {
     z-index: 1;
     right: calc((50vw - (var(--mswidth)/2)) - 100px);
     top: calc((50vh - (var(--msheight)/2)) - 160px);
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    60% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-3px) scale(1.07);
+    }
+    80% {
+        transform: translateY(-2px) scale(1.05);
+    }
 }

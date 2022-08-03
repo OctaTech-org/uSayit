@@ -15,11 +15,30 @@
                 <textarea class="msg-input" type="text" placeholder="Type your words here..." spellcheck="false"></textarea>
                 <div class="platform">
                     <div class="platform-title">Choose The Platform :</div>
-                    <div class="button twt-button"><img src="material/twt.svg" alt=""></div>
-                    <div class="button ig-button" ><img src="material/ig.svg" alt=""></div>
+                    <div class="button" id="twt-button"><img src="material/twt.svg" alt=""></div>
+                    <div class="button" id="ig-button"><img src="material/ig.svg" alt=""></div>
                 </div>
             </div>
         </div>
-        <script src="message-js.js"></script>
+        <script>
+            let twtBtn = document.getElementById("twt-button");
+            console.log(twtBtn);
+            let twtBtnIsClick = false;
+
+            twtBtn.addEventListener('click', () => {
+                if(twtBtnIsClick === false){
+                    twtBtn.style.backgroundColor = '#3FA3FF';
+                    twtBtn.style.borderColor = '#FFFFFF';
+                    twtBtn.style.boxShadow = '5px 5px 10px rgba(63, 163, 255, 0.5), inset 5px 5px 10px rgba(0, 0, 0, 0.25)';
+
+                    twtBtnIsClick = true;
+                }
+                else {
+                    twtBtn.style.backgroundColor = '#FFFFFF';
+
+                    twtBtnIsClick = false;
+                }
+            })
+        </script>
     </body>
 </html>
