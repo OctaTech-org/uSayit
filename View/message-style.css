@@ -690,8 +690,8 @@ body {
 
 @media (max-width: 425px) {
     :root {
-        --mswidth: 80vw;
-        --msheight: 50vw;
+        --mswidth: 90vw;
+        --msheight: 65vw;
         --twtH : auto;
         --twtBS_a : 1px 1px 5px rgba(63, 163, 255, 0.5), inset 1px 1px 5px rgba(0, 0, 0, 0.25);
         --twtBS_b : 1px 1px 5px rgba(63, 163, 255, 0.5), inset 1px 1px 5px rgba(255, 255, 255, 0.25);
@@ -735,7 +735,7 @@ body {
     }
 
     .message > .container > .msg-title {
-        font-size: 3vw;
+        font-size: 3.2vw;
         margin-top: calc(var(--mswidth) / 20);
     }
 
@@ -744,7 +744,7 @@ body {
         width: 80%;
         height: 17vw;
         font-size: 2.3vw;
-        margin-top: 14px;
+        margin-top: 20px;
         padding: 8px 12px 5px 12px;
         border-radius: 10px;
         border-width: 2px;
@@ -761,12 +761,12 @@ body {
     }
 
     .message > .container > .platform {
-        margin-top: 8px;
+        margin-top: 10px;
     }
 
     .message > .container > .platform > .platform-title {
-        font-size: 2.4vw;
-        margin-bottom: 6px;
+        font-size: 2.6vw;
+        margin-bottom: 10px;
     }
 
     .message > .container > .platform > .btn-cont > .button {
@@ -775,26 +775,26 @@ body {
 
     .message > .container > .platform > .btn-cont > #twt-button {
         border-width: 2px;
-        height: 25px;
-        width: 25px;
+        height: 30px;
+        width: 30px;
     }
     
     .message > .container > .platform > .btn-cont > #twt-button > #twt-img {
-        width: 15px;
-        height: 15px;
+        width: 18px;
+        height: 18px;
         margin: auto;
     }
     
     .message > .container > .platform > .btn-cont > #ig-button {
-        margin-left: 10px;
+        margin-left: 20px;
         border-width: 2px;
-        height: 25px;
-        width: 25px;
+        height: 30px;
+        width: 30px;
     }
     
     .message > .container > .platform > .btn-cont > #ig-button > #ig-img {
-        width: 13px;
-        height: 13px;
+        width: 16px;
+        height: 16px;
     }
 
     .message > .container > .platform > #ig-preview > #preview-text {
@@ -806,7 +806,7 @@ body {
         margin-bottom: 5px;
         border-width: 2px;
         border-radius: 8px;
-        width: 35vw;
+        width: 45vw;
     }
 
     .message > .container > #post-button {
