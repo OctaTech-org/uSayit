@@ -1,13 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Monserrat', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap');
 
-/* body {
-    background-image: url(background.jpg);
-} */
+body {
+    background-image: url(material/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat';
+}
 
 header {
     position: absolute;
@@ -27,15 +25,48 @@ header .logo {
 }
 
 .platform h2 {
+    width: 23vw;
+    text-align: center;
     border: 5px solid;
-    /* display: inline-block; */
     padding: 5px 20px;
     border-radius: 40px;
     font-weight: bold;
-    background: #017143
+    background: #ffff;
 }
 
-.popText {
-    text-align: center;
-    padding: 20%;
+.button {
+    display: flex;
+    justify-content: center;
 }
+
+.twitter {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border: 1px solid blue;
+    border-radius: 100px;
+    background: #ffff;
+}
+
+.twitter img {
+    margin: auto;
+    width: 46px;
+    height: 37px
+}
+
+.twitter:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.twitter:hover {
+    background-color: #3FA3FF;
+    border-color: white;
+    border-width: 5px;
+}
+
+.instagram {
+    padding: 30px;
+    border: 1px solid red;
+    background: #ffff;
+}
+
