@@ -43,10 +43,10 @@
         </div>
         
         <div class="circle-frontend">
-            <span id="text-fe">
-                Front End
-            </span>
-            <div class="core-frontend">
+                <span id="text-fe">
+                    Front End
+                </span>
+            <div id="core-frontend">
                 <div class="fc zka">
                     <span id="fc-zka">
                         ZKA
@@ -85,20 +85,30 @@
 
         
     
-    
-        <div class="popup-frontend">
-            <div class="popup-backButton">
-                <span id="popup-backText">
-                    &times;
-                </span>
-            <li class="front-endGank">
-                <ul id="dylee"><img src="DYLEE.png"></ul>
-                <ul id="deva"><img src="DEVA.png"></ul>
-                <ul id="azka"><img src="AZKA.png"></ul>
-                <ul id="grouptag"><span>FRONT-END TEAM</span></ul>
-            </li>
+        <div class="popup-modal" id="popup-frontend">
+             <div class="popup-backButton">
+                 <div id="popup-backBtn">
+                    <span id="Text">
+                        &times;
+                    </span>
+                 </div>
             </div>
+            <ul class="front-endGank">
+                <il id="dylee"><img src="DYLEE.png"></ul>
+                <il id="deva"><img src="DEVA.png"></ul>
+                <il id="azka"><img src="AZKA.png"></ul>
+                <il id="grouptag"><span>FRONT-END TEAM</span></ul>
+            </ul>
         </div>
     </div>
+
+    <script>
+            document.getElementById('core-frontend').addEventListener('click', function(){
+                document.querySelector('#popup-frontend').style.display = 'block';
+            });
+            document.querySelector('.popup-backButton').addEventListener('click', function(){
+                document.querySelector('#popup-frontend').style.display = 'none';
+            });
+    </script>
 </body>
 </html>
