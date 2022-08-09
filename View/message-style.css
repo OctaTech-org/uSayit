@@ -715,7 +715,7 @@ body {
         font-weight: 900;
         line-height: 1;
         position: absolute;
-        bottom: 9.5px;
+        bottom: 9px;
         left: 21px;
     }
 
@@ -735,15 +735,15 @@ body {
     }
 
     .message > .container > .msg-title {
-        font-size: 3.2vw;
-        margin-top: calc(var(--mswidth) / 20);
+        font-size: 3.5vw;
+        margin-top: calc(var(--mswidth) / 18);
     }
 
     .message > .container > .msg-input {
         left: 0.5px;
         width: 80%;
-        height: 17vw;
-        font-size: 2.3vw;
+        height: 18vw;
+        font-size: 2.5vw;
         margin-top: 20px;
         padding: 8px 12px 5px 12px;
         border-radius: 10px;
@@ -765,7 +765,7 @@ body {
     }
 
     .message > .container > .platform > .platform-title {
-        font-size: 2.6vw;
+        font-size: 2.8vw;
         margin-bottom: 10px;
     }
 
