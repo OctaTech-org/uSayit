@@ -28,7 +28,7 @@
             <span id="text-uiux">
                 UI/UX
             </span>
-            <div class="core-uiux">
+            <div id="core-uiux">
                 <div class="uc vic">
                     <span id="uc-vic">
                         VIC
@@ -69,7 +69,7 @@
             <span id="text-be">
                 Back End
             </span>
-            <div class="core-backend">    
+            <div id="core-backend">    
                 <div class="bc mik">
                     <span id="bc-mik">
                         MIK
@@ -85,20 +85,50 @@
 
         
     
-        <div class="popup-modal" id="popup-frontend">
-             <div class="popup-backButton">
-                 <div id="popup-backBtn">
-                    <span id="Text">
-                        &times;
-                    </span>
-                 </div>
+        <div class="popup-modal">
+            <div id="popup-frontend">
+                <div class="popup-fbackButton">
+                    <div id="popup-fbackBtn">
+                        <span id="Text">
+                            &times;
+                        </span>
+                    </div>
+                </div>
+                <ul class="front-endGank">
+                    <il id="dylee"><img src="DYLEE.png"></ul>
+                    <il id="deva"><img src="DEVA.png"></ul>
+                    <il id="azka"><img src="AZKA.png"></ul>
+                    <il id="grouptag"><span>FRONT-END TEAM</span></ul>
+                </ul>
             </div>
-            <ul class="front-endGank">
-                <il id="dylee"><img src="DYLEE.png"></ul>
-                <il id="deva"><img src="DEVA.png"></ul>
-                <il id="azka"><img src="AZKA.png"></ul>
-                <il id="grouptag"><span>FRONT-END TEAM</span></ul>
-            </ul>
+            <div id="popup-backend">
+                <div class="popup-bbackButton">
+                    <div id="popup-bbackBtn">
+                        <span id="Text">
+                            &times;
+                        </span>
+                    </div>
+                </div>
+                <ul class="back-endGank">
+                    <il id="mikail"><img src="MIKAIL.png"></ul>
+                    <il id="talim"><img src="TALIM.png"></ul>
+                    <il id="grouptag"><span>BACK-END TEAM</span></ul>
+                </ul>
+            </div>
+            <div id="popup-uiux">
+                <div class="popup-ubackButton">
+                    <div id="popup-ubackBtn">
+                        <span id="Text">
+                            &times;
+                        </span>
+                    </div>
+                </div>
+                <ul class="ui-uxGank">
+                    <il id="adit"><img src="ADITYA.png"></ul>
+                    <il id="calzy"><img src="CALZY.png"></ul>
+                    <il id="grouptag"><span>UI-UX TEAM</span></ul>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -106,8 +136,22 @@
             document.getElementById('core-frontend').addEventListener('click', function(){
                 document.querySelector('#popup-frontend').style.display = 'block';
             });
-            document.querySelector('.popup-backButton').addEventListener('click', function(){
+            document.querySelector('.popup-fbackButton').addEventListener('click', function(){
                 document.querySelector('#popup-frontend').style.display = 'none';
+            });
+            
+            document.getElementById('core-backend').addEventListener('click', function(){
+                document.querySelector('#popup-backend').style.display = 'block';
+            });
+            document.querySelector('.popup-bbackButton').addEventListener('click', function(){
+                document.querySelector('#popup-backend').style.display = 'none';
+            });
+
+            document.getElementById('core-uiux').addEventListener('click', function(){
+                document.querySelector('#popup-uiux').style.display = 'block';
+            });
+            document.querySelector('.popup-ubackButton').addEventListener('click', function(){
+                document.querySelector('#popup-uiux').style.display = 'none';
             });
     </script>
 </body>

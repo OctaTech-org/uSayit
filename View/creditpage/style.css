@@ -96,7 +96,7 @@ body{
     transition: all 300ms ease-in;
 }
 
-.core-uiux {
+.circle-uiux #core-uiux {
     position: absolute;
     bottom: 0%;
     width: 100%;
@@ -107,7 +107,7 @@ body{
     transition: all 300ms ease-in;
 }
 
-.core-uiux:hover {
+.circle-uiux:hover #core-uiux {
     transition: all 300ms ease-out;
     opacity: 100%;
 }
@@ -206,7 +206,7 @@ body{
     transition: all 300ms ease-in;
 }
 
-.core-backend{
+.circle-backend #core-backend{
     position: absolute;
     bottom: 0%;
     width: 100%;
@@ -217,7 +217,7 @@ body{
     transition: all 300ms ease-in;
 }
 
-.core-backend:hover{ 
+.circle-backend:hover #core-backend{ 
     transition: all 300ms ease-out;
     opacity: 100%;
 }
@@ -384,22 +384,20 @@ body{
     }
 }
 
-.popup-modal{
+#popup-frontend{
     position: absolute;
     top: 0%;
     left: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     height: 100%;
     width: 100%;
     z-index: 100;
-}
-
-#popup-frontend{
     display: none;
 }
 
 #popup-frontend span{
     position: absolute;
+    cursor: pointer;
     top: 0;
     left: 50px;
     font-size: 100px;
@@ -412,12 +410,12 @@ body{
 }
 
 .container #popup-frontend #popup-backBtn span{
-    cursor: pointer;
-    background-color: rgb 0,0,0,0;
+    background-color: rgb (0,0,0,0);
 }
 .container #popup-frontend #grouptag span{
+    cursor: default;
     top: 10px;
-    left:55%;
+    left: 55%;
     font-size: 75PX;
 }
 
@@ -436,4 +434,98 @@ body{
     width: 820px;
     top: 80px;
     left: 40%;
+}
+#popup-backend{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.95);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+#popup-backend span{
+    position: absolute;
+    cursor:pointer;
+    top: 0;
+    left: 50px;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #FFFFFF;
+    background-color: rgb(255, 255, 255, 0);
+    border: 5px solid rgb(255, 255, 255, 0);
+    text-align: center;
+    z-index: 100;
+}
+.container #popup-backend #popup-backBtn span{
+    background-color: rgb 0,0,0,0;
+}
+.container #popup-backend #grouptag span{
+    top: 10px;
+    left:55%;
+    font-size: 75PX;
+    cursor: default;
+}
+#popup-backend img{
+    position: absolute;
+    left: 5%;
+    width: 720px;
+}
+.container #popup-backend #talim img{
+    top: 25px;
+    left: 100px;
+    width: 800px;
+}
+.container #popup-backend #mikail img{
+    top: 25px;
+    left: 600px;
+    width: 800px;
+}
+#popup-uiux{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.95);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+#popup-uiux span{
+    position: absolute;
+    cursor:pointer;
+    top: 0;
+    left: 50px;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #FFFFFF;
+    background-color: rgb(255, 255, 255, 0);
+    border: 5px solid rgb(255, 255, 255, 0);
+    text-align: center;
+    z-index: 100;
+}
+.container #popup-uiux #popup-backBtn span{
+    background-color: rgb 0,0,0,0;
+}
+.container #popup-uiux #grouptag span{
+    top: 10px;
+    left: 55%;
+    font-size: 75PX;
+    cursor: default;
+}
+#popup-uiux img{
+    position: absolute;
+    left: 5%;
+    width: 720px;
+}
+.container #popup-uiux #calzy img{
+    top: 25px;
+    left: 100px;
+    width: 800px;
+}
+.container #popup-uiux #adit img{
+    top: 25px;
+    left: 600px;
+    width: 800px;
 }
