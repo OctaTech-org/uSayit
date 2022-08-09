@@ -149,7 +149,7 @@ function igClick(){
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({"text": content_message})
+            body: JSON.stringify({text: content_message})
         }).then(response => console.log(response));
     }
     else {
