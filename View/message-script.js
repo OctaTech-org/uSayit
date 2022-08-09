@@ -145,9 +145,12 @@ function igClick(){
         let content_message = document.querySelector(".msg-input").value;
         fetch('https://usayit-api.herokuapp.com/api/igPreview', {
             method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({"text": content_message})
-        })
-            .then(response => console.log(response));
+        }).then(response => console.log(response));
     }
     else {
         igBtn.style.borderColor = '#E25B5B';

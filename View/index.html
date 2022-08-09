@@ -4,32 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uSay!t</title>
-    <link href="landingPage-style.css" rel="stylesheet" type="text/css"/>
+    <title>Tutor fetching api by muhammad mikail asada</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <header>
-        <img src="material/LandingPage-material/Logo.png" class="logo"/>
-        <section class="platform">
-            <h2>Available Platform</h2>
-            <div class="button">
-                <div class="twitter">
-                    <img src="material/twt.svg">
-                </div>
-                <div class="instagram">
-                    <img src="material/instagram.svg">
-                </div>
-                
-            </div>
-            
-        </section>
-    </header>
-    <!-- <div class="content">
-        <div class="popText">
-            <p>SHARE WHATEVER YOU WANT</p>
-            <p>WITH THIS BUTTON</p> 
-        </div>    
-    </div> -->
-    
+    <img id="ig-prev" src="" alt="">
+    <input id="textt" type="text">
+    <button id="post"> submit </button>
+    <script>
+        let igPrev = document.getElementById("ig-prev");
+        let submit = document.getElementById("post");
+
+        submit.addEventListener('click', () => {
+            let apage = document.getElementById("textt").value;
+            axios.post("https://usayit-api.herokuapp.com/api/igPreview", {
+            "text": apage
+            }).then((res) => {
+                console.log(res.data.resCode)
+                igPrev.src = res.data.image
+            }).catch((err) => {
+                console.log(err.response.status)
+            })
+        })
+
+        
+    </script>
 </body>
 </html>
