@@ -691,7 +691,7 @@ body {
 @media (max-width: 425px) {
     :root {
         --mswidth: 85vw;
-        --msheight: 65vw;
+        --msheight: 70vw;
         --twtH : auto;
         --twtBS_a : 1px 1px 5px rgba(63, 163, 255, 0.5), inset 1px 1px 5px rgba(0, 0, 0, 0.25);
         --twtBS_b : 1px 1px 5px rgba(63, 163, 255, 0.5), inset 1px 1px 5px rgba(255, 255, 255, 0.25);
@@ -711,12 +711,12 @@ body {
     }
 
     .back-button #text {
-        font-size: 8px;
+        font-size: 10px;
         font-weight: 900;
         line-height: 1;
         position: absolute;
-        bottom: 9px;
-        left: 21px;
+        bottom: 7px;
+        left: 18px;
     }
 
     .back-button:hover {
