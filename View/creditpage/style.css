@@ -3,7 +3,7 @@
 body{
     background-image: url("background.svg");
     background-size: cover;
-    
+    overflow: hidden;  
 }
 .container {
   width: 1440px;
@@ -384,37 +384,50 @@ body{
 }
 
 .popup-frontend{
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 0%;
     left: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.99);
     height: 100%;
     width: 100%;
     z-index: 100;
-    display: none;
+    display: block;
 }
 
 .popup-frontend span{
     position: absolute;
     top: 0;
-    left: 10px;
-    font-size: 25px;
-    background-color: #FFFFFF;
-    border: 5px solid #FFFFFF;
-    border: 50%;
+    left: 50px;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #FFFFFF;
+    background-color: rgb(255, 255, 255, 0);
+    border: 5px solid rgb(255, 255, 255, 0);
     text-align: center;
     cursor: pointer;
     z-index: 100;
 }
 
-.container .popup-frontend img{
+.container .popup-frontend #grouptag span{
+    top: 10px;
+    left:55%;
+    font-size: 75PX;
+}
+
+.popup-frontend img{
     position: absolute;
-    left: 12.5%;
-    transform: translate(0%, 0%);
-    object-fit: cover;
-    width: 620px;
+    left: 5%;
+    width: 720px;
 }
 .container .popup-frontend #dylee img{
-    top: 230px;
+    top: 240px;
+}
+.container .popup-frontend #deva img{
+    bottom: 150px ;
+
+}.container .popup-frontend #azka img{
+    width: 820px;
+    top: 80px;
+    left: 40%;
 }
 
