@@ -391,7 +391,7 @@ body{
     height: 100%;
     width: 100%;
     z-index: 100;
-    display: block;
+    display: none;
 }
 
 .popup-frontend span{
