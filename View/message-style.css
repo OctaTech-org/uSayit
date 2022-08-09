@@ -164,7 +164,7 @@ body {
     margin-left: 40px;
     background-color: #FFFFFF;
     border: 4px solid #E25B5B;
-    box-shadow: 5px 5px 10px rgba(226, 91, 91, 0.5), inset 5px 5px 10px rgba(255, 255, 255, 0.25);
+    box-shadow: var(--igBS_b);
     display: flex;
     height: 45px;
     width: 45px;
