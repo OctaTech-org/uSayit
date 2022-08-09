@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
+    <title>Contributor</title>
+</head>
+<body>
+    <div class="container">
+        <div class="back-button">
+            <a href="message.html">
+                <span id="text">
+                    < BACK
+                 
+                </span>
+            </a>
+        </div>
+        
+        <div class="circle-otech">
+            <div class="otech ologo" align="center">
+                <img src="creditpage/otech-logo.png">
+            </div> 
+            <div class="usayit-logo">
+                <img src="creditpage/usayit-logo.png">
+            </div>    
+        </div>
+       
+        <div class="circle-uiux">
+            <span id="text-uiux">
+                UI/UX
+            </span>
+            <div id="core-uiux">
+                <div class="uc vic">
+                    <span id="uc-vic">
+                        VIC
+                    </span>
+                </div>
+                <div class="uc mal">
+                    <span id="uc-mal">
+                        MAL
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="circle-frontend">
+                <span id="text-fe">
+                    Front End
+                </span>
+            <div id="core-frontend">
+                <div class="fc zka">
+                    <span id="fc-zka">
+                        ZKA
+                    </span>
+                </div>
+                <div class="fc vno">
+                    <span id="fc-vno">
+                        VNO
+                    </span>
+                </div>
+                <div class="fc lee">
+                    <span id="fc-lee">
+                        LEE
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="circle-backend">
+            <span id="text-be">
+                Back End
+            </span>
+            <div id="core-backend">    
+                <div class="bc mik">
+                    <span id="bc-mik">
+                        MIK
+                    </span>
+                </div>
+                <div class="bc lim">
+                    <span id="bc-lim">
+                        LIM
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        
+    
+        <div class="popup-modal">
+            <div id="popup-frontend">
+                <div class="popup-fbackButton">
+                    <div id="popup-fbackBtn">
+                        <span id="Text">
+                            &times;
+                        </span>
+                    </div>
+                </div>
+                <ul class="front-endGank">
+                    <il id="dylee"><img src="creditpage/DYLEE.png"></ul>
+                    <il id="deva"><img src="creditpage/DEVA.png"></ul>
+                    <il id="azka"><img src="creditpage/AZKA.png"></ul>
+                    <il id="grouptag"><span>FRONT-END TEAM</span></ul>
+                </ul>
+            </div>
+            <div id="popup-backend">
+                <div class="popup-bbackButton">
+                    <div id="popup-bbackBtn">
+                        <span id="Text">
+                            &times;
+                        </span>
+                    </div>
+                </div>
+                <ul class="back-endGank">
+                    <il id="mikail"><img src="creditpage/MIKAIL.png"></ul>
+                    <il id="talim"><img src="creditpage/TALIM.png"></ul>
+                    <il id="grouptag"><span>BACK-END TEAM</span></ul>
+                </ul>
+            </div>
+            <div id="popup-uiux">
+                <div class="popup-ubackButton">
+                    <div id="popup-ubackBtn">
+                        <span id="Text">
+                            &times;
+                        </span>
+                    </div>
+                </div>
+                <ul class="ui-uxGank">
+                    <il id="adit"><img src="creditpage/ADITYA.png"></ul>
+                    <il id="calzy"><img src="creditpage/CALZY.png"></ul>
+                    <il id="grouptag"><span>UI-UX TEAM</span></ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+            document.getElementById('core-frontend').addEventListener('click', function(){
+                document.querySelector('#popup-frontend').style.display = 'block';
+            });
+            document.querySelector('.popup-fbackButton').addEventListener('click', function(){
+                document.querySelector('#popup-frontend').style.display = 'none';
+            });
+            
+            document.getElementById('core-backend').addEventListener('click', function(){
+                document.querySelector('#popup-backend').style.display = 'block';
+            });
+            document.querySelector('.popup-bbackButton').addEventListener('click', function(){
+                document.querySelector('#popup-backend').style.display = 'none';
+            });
+
+            document.getElementById('core-uiux').addEventListener('click', function(){
+                document.querySelector('#popup-uiux').style.display = 'block';
+            });
+            document.querySelector('.popup-ubackButton').addEventListener('click', function(){
+                document.querySelector('#popup-uiux').style.display = 'none';
+            });
+    </script>
+</body>
+</html>
