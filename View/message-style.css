@@ -164,7 +164,7 @@ body {
     margin-left: 40px;
     background-color: #FFFFFF;
     border: 4px solid #E25B5B;
-    box-shadow: 5px 5px 10px rgba(226, 91, 91, 0.5), inset 5px 5px 10px rgba(255, 255, 255, 0.25);
+    box-shadow: var(--igBS_b);
     display: flex;
     height: 45px;
     width: 45px;
@@ -690,8 +690,8 @@ body {
 
 @media (max-width: 425px) {
     :root {
-        --mswidth: 80vw;
-        --msheight: 50vw;
+        --mswidth: 85vw;
+        --msheight: 70vw;
         --twtH : auto;
         --twtBS_a : 1px 1px 5px rgba(63, 163, 255, 0.5), inset 1px 1px 5px rgba(0, 0, 0, 0.25);
         --twtBS_b : 1px 1px 5px rgba(63, 163, 255, 0.5), inset 1px 1px 5px rgba(255, 255, 255, 0.25);
@@ -704,19 +704,19 @@ body {
         border-width: 2px;
         margin-left: 12px;
         margin-top: 12px;
-        width: 60px;
-        height: 20px;
+        width: 75px;
+        height: 25px;
         border-radius: 6px;
         box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5), inset 0.25px 0.25px 5px #FFFFFF;
     }
 
     .back-button #text {
-        font-size: 8px;
+        font-size: 10px;
         font-weight: 900;
         line-height: 1;
         position: absolute;
-        bottom: 6px;
-        left: 14px;
+        bottom: 7px;
+        left: 18px;
     }
 
     .back-button:hover {
@@ -735,16 +735,16 @@ body {
     }
 
     .message > .container > .msg-title {
-        font-size: 2.5vw;
-        margin-top: calc(var(--mswidth) / 25);
+        font-size: 3.5vw;
+        margin-top: calc(var(--mswidth) / 18);
     }
 
     .message > .container > .msg-input {
         left: 0.5px;
         width: 80%;
-        height: 17vw;
-        font-size: 1.882vw;
-        margin-top: 14px;
+        height: 18vw;
+        font-size: 2.5vw;
+        margin-top: 20px;
         padding: 8px 12px 5px 12px;
         border-radius: 10px;
         border-width: 2px;
@@ -761,61 +761,61 @@ body {
     }
 
     .message > .container > .platform {
-        margin-top: 8px;
+        margin-top: 20px;
     }
 
     .message > .container > .platform > .platform-title {
-        font-size: 2vw;
-        margin-bottom: 6px;
+        font-size: 2.8vw;
+        margin-bottom: 10px;
     }
 
     .message > .container > .platform > .btn-cont > .button {
-        margin-bottom: 12px;
+        margin-bottom: 20px;
     }
 
     .message > .container > .platform > .btn-cont > #twt-button {
-        border-width: 1.75px;
-        height: 14px;
-        width: 14px;
+        border-width: 2px;
+        height: 30px;
+        width: 30px;
     }
     
     .message > .container > .platform > .btn-cont > #twt-button > #twt-img {
-        width: 8px;
-        height: 8px;
+        width: 18px;
+        height: 18px;
         margin: auto;
     }
     
     .message > .container > .platform > .btn-cont > #ig-button {
-        margin-left: 10px;
-        border-width: 1.75px;
-        height: 14px;
-        width: 14px;
+        margin-left: 20px;
+        border-width: 2px;
+        height: 30px;
+        width: 30px;
     }
     
     .message > .container > .platform > .btn-cont > #ig-button > #ig-img {
-        width: 7px;
-        height: 7px;
+        width: 16px;
+        height: 16px;
     }
 
     .message > .container > .platform > #ig-preview > #preview-text {
-        font-size: 1.5vw;
+        font-size: 3vw;
     }
 
     .message > .container > .platform > #ig-preview > #preview-img {
         margin-top: 6px;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         border-width: 2px;
         border-radius: 8px;
-        width: 30vw;
+        width: 45vw;
     }
 
     .message > .container > #post-button {
-        height: 4vw;
-        margin-bottom: 10px;
+        height: 8vw;
+        margin-bottom: 20px;
         border-width: 2px;
         font-weight: 900;
-        font-size: 8px;
-        line-height: 4vw;
+        font-size: 14px;
+        line-height: 8vw;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25);
     }
 

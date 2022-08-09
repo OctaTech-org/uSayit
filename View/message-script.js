@@ -140,17 +140,18 @@ function igClick(){
         body.style.height = 'var(--igH)';
 
         igBtnIsClick = true;
-        
-        console.log("tru min")
+
         let content_message = document.querySelector(".msg-input").value;
+        let prevImage = document.getElementById("preview-img");
+
         fetch('https://usayit-api.herokuapp.com/api/igPreview', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({"text": content_message})
-        }).then(response => console.log(response));
+            body: JSON.stringify({text: content_message})
+        }).then(response => response.json()).then(response => {prevImage.src = response.image});
     }
     else {
         igBtn.style.borderColor = '#E25B5B';
