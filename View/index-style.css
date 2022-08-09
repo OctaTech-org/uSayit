@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap');
+
+body {
+    background-image: url(material/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat';
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 80%;
+}
+
+.platform h2 {
+    width: 23vw;
+    text-align: center;
+    border: 5px solid;
+    padding: 5px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    background: #ffff;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.twitter {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border: 1px solid blue;
+    border-radius: 100px;
+    background: #ffff;
+}
+
+.twitter img {
+    margin: auto;
+    width: 46px;
+    height: 37px
+}
+
+.twitter:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.twitter:hover {
+    background-color: #3FA3FF;
+    border-color: white;
+    border-width: 5px;
+}
+
+.instagram {
+    padding: 30px;
+    border: 1px solid red;
+    background: #ffff;
+}
+
