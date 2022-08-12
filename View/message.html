@@ -7,19 +7,20 @@
         <title>uSayit - Message Page</title>
     </head>
     <body id="body">
-        <div class="back-button"><a href="creditpage/CreditPage.html"><span id="text">< BACK</a></span></div>
+        <div class="back-button"><a href="CreditPage.html"><span id="text">< BACK</a></span></div>
         <div class="logo"><img src="material/logo.png" alt="uSayit Logo"></div>
         <div class="message" id="message">
             <div class="container">
                 <div class="msg-title">Enter The Words of Yours</div>
-                <textarea class="msg-input" type="text" placeholder="Type your words here..." onfocus="this.placeholder = ''"
+                <textarea class="msg-input" id="msg-input" type="text" placeholder="Type your words here..." onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Type your words here...'" spellcheck="false"></textarea>
                 <div class="platform">
-                    <div class="platform-title">Choose The Platform :</div>
+                    <div class="platform-title">Choose The Platform(s) :</div>
                     <div class="btn-cont">
                         <div class="button" id="twt-button"><img id="twt-img" src="material/twt.svg" alt=""></div>
                         <div class="button" id="ig-button"><img id="ig-img" src="material/ig.svg" alt=""></div>
                     </div>
+                    <div id="msg-warn"></div>
                     <div id="ig-preview">
                         <div id="preview-text">Instagram Preview</div>
                         <img id="preview-img" src="material/feed-template.png" alt="">

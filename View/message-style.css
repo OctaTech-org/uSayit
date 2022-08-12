@@ -60,6 +60,10 @@ body {
     transform: scale(0.9);
 }
 
+.back-button > a {
+    text-decoration: none;
+}
+
 .message {
     background-color: #FFFFFF;
     position: absolute;
@@ -174,6 +178,11 @@ body {
     margin: auto;
     width: 25px;
     height: 25px;
+}
+
+.message > .container > .platform > #msg-warn {
+    color: #D0342C;
+    margin-bottom: 30px;
 }
 
 .message > .container > .platform > #ig-preview {
@@ -311,6 +320,10 @@ body {
         height: 1.9vw;
     }
 
+    .message > .container > .platform > #msg-warn {
+        font-size: 1.1vw;
+    }
+
     .message > .container > .platform > #ig-preview > #preview-text {
         font-size: 1.1vw;
     }
@@ -412,6 +425,10 @@ body {
     .message > .container > .platform > .btn-cont > #ig-button > #ig-img {
         width: 1.65vw;
         height: 1.65vw;
+    }
+
+    .message > .container > .platform > #msg-warn {
+        font-size: 1.1vw;
     }
 
     .message > .container > .platform > #ig-preview > #preview-text {
@@ -533,6 +550,10 @@ body {
     .message > .container > .platform > .btn-cont > #ig-button > #ig-img {
         width: 1.65vw;
         height: 1.65vw;
+    }
+
+    .message > .container > .platform > #msg-warn {
+        font-size: 1.1vw;
     }
 
     .message > .container > .platform > #ig-preview > #preview-text {
@@ -660,6 +681,10 @@ body {
     .message > .container > .platform > .btn-cont > #ig-button > #ig-img {
         width: 1.65vw;
         height: 1.65vw;
+    }
+
+    .message > .container > .platform > #msg-warn {
+        font-size: 1.1vw;
     }
 
     .message > .container > .platform > #ig-preview > #preview-text {
@@ -795,6 +820,10 @@ body {
     .message > .container > .platform > .btn-cont > #ig-button > #ig-img {
         width: 16px;
         height: 16px;
+    }
+
+    .message > .container > .platform > #msg-warn {
+        font-size: 3vw;
     }
 
     .message > .container > .platform > #ig-preview > #preview-text {
