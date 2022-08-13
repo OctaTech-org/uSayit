@@ -159,6 +159,7 @@ body {
 }
 
 .message > .container > .platform > .btn-cont > #twt-button > #twt-img {
+    pointer-events: none;
     margin: auto;
     width: 30px;
     height: 30px;
@@ -175,6 +176,7 @@ body {
 }
 
 .message > .container > .platform > .btn-cont > #ig-button > #ig-img {
+    pointer-events: none;
     margin: auto;
     width: 25px;
     height: 25px;
@@ -189,9 +191,34 @@ body {
     display: none;
 }
 
+.message > .container > .platform > #ig-preview > #preview-loading {
+    display: none;
+    margin: 15px auto 25px auto;
+    width: 20vw;
+    height: 20vw;
+    border: 4px solid #E25B5B;
+    border-radius: 20px;
+    position: relative;
+}
+
+.message > .container > .platform > #ig-preview > #preview-loading > #element::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    border-top-color: #E25B5B;
+    animation: spinner .6s linear infinite;
+}
+
 .message > .container > .platform > #ig-preview > #preview-img {
-    margin-top: 15px;
-    margin-bottom: 25px;
+    margin: 15px auto 25px auto;
     width: 20vw;
     border: 4px solid #E25B5B;
     border-radius: 20px;
@@ -225,11 +252,16 @@ body {
 }
 
 .logo {
+    pointer-events: none;
     position: absolute;
     z-index: 1;
     right: calc((50vw - (var(--mswidth)/2)) - 100px);
     top: calc((50vh - (var(--msheight)/2)) - 160px);
 }
+
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
 
 @keyframes bounce {
     0%,
@@ -253,7 +285,7 @@ body {
         --twtH : 800px;
         --twtBS_a : 4px 4px 10px rgba(63, 163, 255, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.25);
         --twtBS_b : 4px 4px 10px rgba(63, 163, 255, 0.5), inset 4px 4px 10px rgba(255, 255, 255, 0.25);
-        --igH : 1100px;
+        --igH : 1300px;
         --igBS_a : 4px 4px 10px rgba(226, 91, 91, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.25);
         --igBS_b : 4px 4px 10px rgba(226, 91, 91, 0.5), inset 4px 4px 10px rgba(255, 255, 255, 0.25);
     }
@@ -328,6 +360,11 @@ body {
         font-size: 1.1vw;
     }
 
+    .message > .container > .platform > #ig-preview > #preview-loading {
+        margin-bottom: 15px;
+        border-width: 3px;
+    }
+
     .message > .container > .platform > #ig-preview > #preview-img {
         margin-bottom: 15px;
         border-width: 3px;
@@ -368,6 +405,8 @@ body {
 
     .message {
         border-width: 6px;
+        border-radius: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35), inset 2px 2px 25px rgba(0, 0, 0, 0.5);
     }
 
     .message > .container > .msg-title {
@@ -380,6 +419,7 @@ body {
         font-size: 1.1vw;
         margin-top: 15px;
         padding: 15px 20px 10px 20px;
+        border-radius: 20px;
     }
 
     .logo img {
@@ -435,6 +475,12 @@ body {
         font-size: 1.1vw;
     }
 
+    .message > .container > .platform > #ig-preview > #preview-loading {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-width: 3px;
+    }
+
     .message > .container > .platform > #ig-preview > #preview-img {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -487,7 +533,7 @@ body {
     .message {
         border-width: 4px;
         border-radius: 25px;
-        box-shadow: 1.5px 1.5px 10px rgba(0, 0, 0, 0.35), inset 1.5px 1.5px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35), inset 2px 2px 10px rgba(0, 0, 0, 0.5);
     }
 
     .message > .container > .msg-title {
@@ -560,6 +606,13 @@ body {
         font-size: 1.1vw;
     }
 
+    .message > .container > .platform > #ig-preview > #preview-loading {
+        margin-top: 7px;
+        margin-bottom: 7px;
+        border-width: 2px;
+        border-radius: 8px;
+    }
+
     .message > .container > .platform > #ig-preview > #preview-img {
         margin-top: 7px;
         margin-bottom: 7px;
@@ -617,7 +670,7 @@ body {
 
     .message {
         border-width: 4px;
-        border-radius: 25px;
+        border-radius: 20px;
         box-shadow: 1.5px 1.5px 10px rgba(0, 0, 0, 0.35), inset 1.5px 1.5px 10px rgba(0, 0, 0, 0.5);
     }
 
@@ -691,6 +744,13 @@ body {
         font-size: 1.1vw;
     }
 
+    .message > .container > .platform > #ig-preview > #preview-loading {
+        margin-top: 7px;
+        margin-bottom: 5px;
+        border-width: 2px;
+        border-radius: 8px;
+    }
+
     .message > .container > .platform > #ig-preview > #preview-img {
         margin-top: 7px;
         margin-bottom: 5px;
@@ -725,6 +785,11 @@ body {
         --igBS_b : 1px 1px 5px rgba(226, 91, 91, 0.5), inset 1px 1px 5px rgba(255, 255, 255, 0.25);
     }
 
+    * {
+        cursor: default;
+        -webkit-tap-highlight-color: transparent;
+    }
+
     .back-button {
         border-width: 2px;
         margin-left: 12px;
@@ -741,7 +806,7 @@ body {
         line-height: 1;
         position: absolute;
         bottom: 7px;
-        left: 18px;
+        left: 17px;
     }
 
     .back-button:hover {
@@ -749,7 +814,7 @@ body {
     }
 
     .message {
-        border-width: 2px;
+        border-width: 3px;
         border-radius: 20px;
         box-shadow: 1.5px 1.5px 10px rgba(0, 0, 0, 0.35), inset 1.5px 1.5px 10px rgba(0, 0, 0, 0.5);
         margin: 18vw calc(50vw - (var(--mswidth)/2)) 0 calc(50vw - (var(--mswidth)/2));
@@ -828,6 +893,15 @@ body {
 
     .message > .container > .platform > #ig-preview > #preview-text {
         font-size: 3vw;
+    }
+
+    .message > .container > .platform > #ig-preview > #preview-loading {
+        margin-top: 6px;
+        margin-bottom: 15px;
+        border-width: 2px;
+        border-radius: 8px;
+        width: 45vw;
+        height: 45vw;
     }
 
     .message > .container > .platform > #ig-preview > #preview-img {
