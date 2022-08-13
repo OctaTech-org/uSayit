@@ -25,19 +25,6 @@ igBtn.addEventListener('mouseenter', igMouseEnter);
 igBtn.addEventListener('mouseleave', igMouseLeave);
 igBtn.addEventListener('click', igClick);
 
-const Sleep = {
-    sleep: (second = 0) => {
-        return new Promise((resolve) => {
-            setTimeout(resolve, second * 1000);
-        });
-    },
-    msleep: (milisecond = 0) => {
-        return new Promise((resolve) => {
-            setTimeout(resolve, milisecond);
-        });
-    }
-}
-
 function twtMouseEnter() {
     if (twtBtnIsClick === false) {
         twtBtn.style.cursor = 'pointer';
@@ -199,6 +186,19 @@ function igClick() {
     }
 }
 
+const Sleep = {
+    sleep: (second = 0) => {
+        return new Promise((resolve) => {
+            setTimeout(resolve, second * 1000);
+        });
+    },
+    msleep: (milisecond = 0) => {
+        return new Promise((resolve) => {
+            setTimeout(resolve, milisecond);
+        });
+    }
+}
+
 function showWarn() {
 
     if (twtBtnIsClick === true || igBtnIsClick === true) {
@@ -351,7 +351,7 @@ const igContentPrev = async () => {
             postButton.style.display = 'none';
             body.style.height = 'auto';
             err = false;
-            
+
         }
 
         if (!msgValid) {
@@ -403,131 +403,27 @@ const igContentPrev = async () => {
 }
 igContentPrev();
 
-// const igContentPrev = async () => {
+postButton.addEventListener('click', () => {
+    let contentMessage = document.querySelector(".msg-input").value.replace(/\s\s+/g, ' ');
 
-//     let msgPreview;
-//     let delay = 100;
+    fetch('https://usayit-api.herokuapp.com/api/sendMessage', {
 
-//     while(true) {
-//         let getMessage = document.querySelector(".msg-input").value.replace(/\s\s+/g, ' ');
-//         let prevImage = document.getElementById("preview-img");
-//         let prevLoad = document.getElementById("preview-loading");
-//         let words = getMessage.split(' ');
-//         let char = getMessage.split('');
-//         let accCharacters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890 ~!@#$%^&*()-_=+[]{}\\|;:\'",<.>/?';
-//         let accCharArr = accCharacters.split('');
-//         let isWordLengthValid = true;
-//         let isInvalidChar = false;
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
 
-//         words.forEach((val, idx, arr) => {
-
-//             if (val.length > 25) {
-
-//                 isWordLengthValid = false;
-
-//                 return;
-//             }
-
-//         });
-
-//         char.forEach((val, idx, arr) => {
-
-//             let charFound = false;
+                text: contentMessage,
+                instagram: igBtnIsClick,
+                twtBtnIsClick: twtBtnIsClick
             
-//             accCharArr.forEach((val2, idx2, arr2) => {
+            })
 
-//                 if(val === val2) {
-
-//                     charFound = true;
-
-//                 }
-
-//             });
-
-//             if(!charFound) {
-
-//                 isInvalidChar = true;
-
-//                 return;
-//             }
-
-//         })
-
-//         if (getMessage === '') {
-
-//             prevImage.src = '';
-//             prevImage.style.display = 'none';
-//             prevLoad.style.display = 'block';
-
-//             await Sleep.msleep(delay);
-
-//             continue;
-//         } else if (msgPreview === getMessage) {
-
-//             await Sleep.msleep(delay);
-
-//             continue;
-//         } else if (getMessage.length < 6) {
-
-//             prevImage.src = '';
-//             prevImage.style.display = 'none';
-//             prevLoad.style.display = 'block';
-
-//             await Sleep.msleep(delay);
-
-//             continue;
-//         } else if (isWordLengthValid === false) {
-
-//             prevImage.src = '';
-//             prevImage.style.display = 'none';
-//             prevLoad.style.display = 'block';
-
-//             await Sleep.msleep(delay);
-
-//             continue;
-//         } else if(isInvalidChar) {
-
-//             prevImage.src = '';
-//             prevImage.style.display = 'none';
-//             prevLoad.style.display = 'block';
-
-//             await Sleep.msleep(delay);
-
-//             continue;
-//         } else if (!igBtnIsClick) {
-
-//             await Sleep.msleep(delay);
-
-//             continue;
-//         }
-
-//         msgPreview = getMessage;
-
-//         prevImage.src = '';
-//         prevImage.style.borderStyle = 'solid';
-//         prevImage.style.display = 'none';
-//         prevLoad.style.display = 'block';
-
-//         await fetch('https://usayit-api.herokuapp.com/api/igPreview', {
-
-//             method: 'POST',
-//             headers: {
-//                 'Accept': 'application/json',
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify({ text: msgPreview })
-
-//         }).then(response => response.json()).then(response => {
+        }).then(response => response.json()).then(response => {
             
-//             prevImage.src = response.image;
-//             prevLoad.style.display = 'none';
-//             prevImage.style.borderStyle = 'solid';
-//             prevImage.style.display = 'block';
+            console.log(response);
 
-//         });
-
-//         await Sleep.msleep(delay);
-
-//     }
-// }
-// igContentPrev();
+        });
+})
