@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
 body{
-    background-image: url("creditpage/background.svg");
+    background-image: url("material/background.jpg");
     background-size: cover;
     overflow: hidden;  
 }
+
 .container {
   width: 1440px;
   height: 700px;
@@ -42,9 +43,11 @@ body{
 }
 
 .usayit-logo img{
-    bottom: 400px;
+    top: 75px;
+    left: 500px;
     width: 230px;
     position: absolute;
+    z-index: 1;
     transition: all 500ms ease-in;
 }
 
@@ -385,7 +388,11 @@ body{
     }
 }
 
-#popup-frontend{
+.popup-modal {
+width: 1440px;
+  height: 700px;
+}
+.popup-modal #popup-frontend{
     position: absolute;
     top: 0%;
     left: 0;
@@ -396,7 +403,7 @@ body{
     display: none;
 }
 
-#popup-frontend span{
+.popup-modal #popup-frontend span{
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -410,33 +417,95 @@ body{
     z-index: 100;
 }
 
-.container #popup-frontend #popup-backBtn span{
+.popup-modal #popup-frontend #popup-backBtn span{
     background-color: rgb (0,0,0,0);
 }
-.container #popup-frontend #grouptag span{
+.popup-modal #popup-frontend #grouptag span{
     cursor: default;
     top: 10px;
-    left: 55%;
+    left: 900px;
     font-size: 75PX;
 }
 
-#popup-frontend img{
+#ig-img {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0%;
+    width: 25px;
+    height: 25px;
     position: absolute;
-    left: 5%;
+    margin: 0 auto;
+}
+
+.popup-modal #popup-frontend #dylee img{
+    margin-top: 240px;
+    position: absolute;
+    left: 100px;
     width: 720px;
 }
-.container #popup-frontend #dylee img{
-    top: 240px;
-}
-.container #popup-frontend #deva img{
-    margin-top: -110px;
 
-}.container #popup-frontend #azka img{
+.popup-modal #popup-frontend  #ig-buttondylee {
+    background-color: #FFFFFF;
+    border: 4px solid #E25B5B;
+    box-shadow: var(--igBS_b);
+    display: flex;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    margin-left: 540px;
+    margin-top: 615px;
+}
+
+.popup-modal #popup-frontend #deva img{
+    margin-top: -110px;
+    position: absolute;
+    left: 100px;
+    width: 720px;
+}
+.popup-modal #popup-frontend  #ig-buttondeva {
+    background-color: #FFFFFF;
+    border: 4px solid #E25B5B;
+    box-shadow: var(--igBS_b);
+    display: flex;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    margin-left: 540px;
+    margin-top: 260px;
+}
+
+.popup-modal #popup-frontend #azka img{
     width: 820px;
     top: 80px;
-    left: 40%;
+    left: 600px;
+    position: absolute;
 }
-#popup-backend{
+
+.popup-modal #popup-frontend  #ig-buttonazka {
+    background-color: #FFFFFF;
+    border: 4px solid #E25B5B;
+    box-shadow: var(--igBS_b);
+    display: flex;
+    height: 45px;
+    width: 45px;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    margin-left: 1240px;
+    margin-top: 515px;
+}
+
+.popup-modal #popup-backend{
     position: absolute;
     top: 0%;
     left: 0;
@@ -446,7 +515,7 @@ body{
     z-index: 100;
     display: none;
 }
-#popup-backend span{
+.popup-modal #popup-backend span{
     position: absolute;
     cursor:pointer;
     top: 0;
@@ -459,31 +528,31 @@ body{
     text-align: center;
     z-index: 100;
 }
-.container #popup-backend #popup-backBtn span{
+.popup-modal #popup-backend #popup-backBtn span{
     background-color: rgb 0,0,0,0;
 }
-.container #popup-backend #grouptag span{
+.popup-modal #popup-backend #grouptag span{
     top: 15px;
     left: 800px;
     font-size: 75PX;
     cursor: default;
 }
-#popup-backend img{
+.popup-modal #popup-backend img{
     position: absolute;
     left: 5%;
     width: 720px;
 }
-.container #popup-backend #talim img{
+.popup-modal #popup-backend #talim img{
     top: 25px;
     left: 100px;
     width: 800px;
 }
-.container #popup-backend #mikail img{
+.popup-modal #popup-backend #mikail img{
     top: 25px;
     left: 600px;
     width: 800px;
 }
-#popup-uiux{
+.popup-modal #popup-uiux{
     position: absolute;
     top: 0%;
     left: 0;
@@ -493,7 +562,7 @@ body{
     z-index: 100;
     display: none;
 }
-#popup-uiux span{
+.popup-modal #popup-uiux span{
     position: absolute;
     cursor:pointer;
     top: 0;
@@ -506,27 +575,57 @@ body{
     text-align: center;
     z-index: 100;
 }
-.container #popup-uiux #popup-backBtn span{
+.popup-modal #popup-uiux #popup-backBtn span{
     background-color: rgb 0,0,0,0;
 }
-.container #popup-uiux #grouptag span{
+.popup-modal #popup-uiux #grouptag span{
     top: 10px;
-    left: 55%;
-    font-size: 75PX;
+    left: 900px;
+    font-size: 75px;
     cursor: default;
 }
-#popup-uiux img{
-    position: absolute;
-    left: 5%;
-    width: 720px;
-}
-.container #popup-uiux #calzy img{
+
+.popup-modal #popup-uiux #calzy img{
     top: 25px;
     left: 100px;
     width: 800px;
+    position: absolute;
+    width: 720px;
 }
-.container #popup-uiux #adit img{
+.popup-modal #popup-uiux #adit img{
     top: 25px;
     left: 600px;
     width: 800px;
+    position: absolute;
+    width: 720px;
+}
+.popup-modal #popup-uiux  #ig-buttonadit {
+    background-color: #FFFFFF;
+    border: 4px solid #E25B5B;
+    box-shadow: var(--igBS_b);
+    display: flex;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    margin-left: 1190px;
+    margin-top: 420px;
+}
+.popup-modal #popup-uiux  #ig-buttonakmal {
+    background-color: #FFFFFF;
+    border: 4px solid #E25B5B;
+    box-shadow: var(--igBS_b);
+    display: flex;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    margin-left: 550px;
+    margin-top: 420px;
 }
