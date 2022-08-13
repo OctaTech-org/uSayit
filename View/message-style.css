@@ -782,6 +782,10 @@ body {
         --igBS_b : 1px 1px 5px rgba(226, 91, 91, 0.5), inset 1px 1px 5px rgba(255, 255, 255, 0.25);
     }
 
+    * {
+        cursor: default;
+    }
+
     .back-button {
         border-width: 2px;
         margin-left: 12px;
@@ -798,7 +802,7 @@ body {
         line-height: 1;
         position: absolute;
         bottom: 7px;
-        left: 18px;
+        left: 17px;
     }
 
     .back-button:hover {
