@@ -282,7 +282,7 @@ body {
         --twtH : 800px;
         --twtBS_a : 4px 4px 10px rgba(63, 163, 255, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.25);
         --twtBS_b : 4px 4px 10px rgba(63, 163, 255, 0.5), inset 4px 4px 10px rgba(255, 255, 255, 0.25);
-        --igH : 1100px;
+        --igH : 1300px;
         --igBS_a : 4px 4px 10px rgba(226, 91, 91, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.25);
         --igBS_b : 4px 4px 10px rgba(226, 91, 91, 0.5), inset 4px 4px 10px rgba(255, 255, 255, 0.25);
     }

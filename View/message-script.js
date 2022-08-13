@@ -16,6 +16,7 @@ let igBtnIsClick = false;
 let igFirstClick = false;
 let msgValid = true;
 let msgWarn;
+let err = false
 
 twtBtn.addEventListener('mouseenter', twtMouseEnter);
 twtBtn.addEventListener('mouseleave', twtMouseLeave);
@@ -155,7 +156,7 @@ function igClick() {
             postButton.style.display = 'block';
             body.style.height = 'var(--igH)';
             message.style.height = 'fit-content';
-            if (igFirstClick === false){
+            if (igFirstClick === false) {
                 prevImage.style.borderStyle = 'hidden';
                 igFirstClick = true;
             }
@@ -200,7 +201,7 @@ function showWarn() {
         } else {
 
             msgWarnEle.style.display = 'none';
-            message.style.height = 'var(--msheight)';
+            message.style.height = 'fit-content';
 
         }
 
@@ -215,8 +216,8 @@ function showWarn() {
 
 function checkMsg() {
 
-    let contentMessage = document.querySelector(".msg-input").value;
-    let accCharacters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890 `~!@#$%^&*()-_=+[]{}\\|;:\'",<.>/?';
+    let contentMessage = document.querySelector(".msg-input").value.replace(/\s\s+/g, ' ');
+    let accCharacters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890 ~!@#$%^&*()-_=+[]{}\\|;:\'",<.>/?';
     let accCharArr = accCharacters.split('');
     let words = contentMessage.split(' ');
     let chars = contentMessage.split('');
@@ -264,6 +265,12 @@ function checkMsg() {
         msgValid = false;
 
         return;
+    } else if (contentMessage[0] === ' ') {
+
+        msgWarn = 'Your message is invalid!';
+        msgValid = false;
+
+        return;
     } else if (contentMessage.length < 6) {
 
         msgWarn = 'Your message is too short!';
@@ -288,10 +295,12 @@ function checkMsg() {
         msgValid = false;
 
         return;
-    }
+    } else {
 
-    msgWarn = '';
-    msgValid = true;
+        msgWarn = '';
+        msgValid = true;
+
+    }
 
 }
 
@@ -303,29 +312,40 @@ const igContentPrev = () => {
 
         checkMsg();
 
+        showWarn();
+
+        if (msgValid && !err) {
+            
+            igClick();
+            igClick();
+            err = true;
+
+        }
+
         if (!igBtnIsClick) {
 
-            return;
+            err = false;
 
+            return;
         }
 
         if (!msgValid && igPrev.style.display == 'block') {
 
-            igClick();
+            showWarn();
             igPrev.style.display = 'none';
             postButton.style.display = 'none';
             body.style.height = 'auto';
-            return;
+            err = false;
 
+            return;
         }
 
         if (!msgValid) {
 
             return;
-
         }
 
-        let contentMessage = document.querySelector(".msg-input").value;
+        let contentMessage = document.querySelector(".msg-input").value.replace(/\s\s+/g, ' ');
         let prevImage = document.getElementById("preview-img");
         let prevLoad = document.getElementById("preview-loading");
 
@@ -343,7 +363,7 @@ const igContentPrev = () => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({text: contentMessage})
+            body: JSON.stringify({ text: contentMessage })
 
         }).then(response => response.json()).then(response => {
 
@@ -357,9 +377,9 @@ const igContentPrev = () => {
         if (contentMessage !== msgPreview) {
 
             msgPreview = contentMessage;
-            
+
         }
 
-    }, 1000)
+    }, 3000)
 }
 igContentPrev();
