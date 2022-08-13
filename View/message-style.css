@@ -159,6 +159,7 @@ body {
 }
 
 .message > .container > .platform > .btn-cont > #twt-button > #twt-img {
+    pointer-events: none;
     margin: auto;
     width: 30px;
     height: 30px;
@@ -175,6 +176,7 @@ body {
 }
 
 .message > .container > .platform > .btn-cont > #ig-button > #ig-img {
+    pointer-events: none;
     margin: auto;
     width: 25px;
     height: 25px;
@@ -250,6 +252,7 @@ body {
 }
 
 .logo {
+    pointer-events: none;
     position: absolute;
     z-index: 1;
     right: calc((50vw - (var(--mswidth)/2)) - 100px);
@@ -784,6 +787,7 @@ body {
 
     * {
         cursor: default;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .back-button {
