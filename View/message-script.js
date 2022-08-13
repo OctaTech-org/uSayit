@@ -6,12 +6,14 @@ let igImg = document.getElementById("ig-img");
 let body = document.getElementById("body");
 let message = document.getElementById("message");
 let msgWarnEle = document.getElementById("msg-warn");
+let prevImage = document.getElementById("preview-img");
 let igPrev = document.getElementById("ig-preview");
 let postButton = document.getElementById("post-button");
 
 let twtBtnIsClick = false;
 let igBtnIsClick = false;
 
+let igFirstClick = false;
 let msgValid = true;
 let msgWarn;
 
@@ -45,7 +47,7 @@ function twtMouseLeave() {
         twtBtn.style.backgroundColor = '#FFFFFF';
         twtBtn.style.borderColor = '#3FA3FF';
         twtBtn.style.boxShadow = 'var(--twtBS_b)';
-        twtBtn.style.transform = 'scale(1)'
+        twtBtn.style.transform = 'scale(1)';
         twtBtn.style.marginTop = '0';
         twtBtn.style.transition = 'transform 100ms linear';
         twtImg.style.filter = 'none';
@@ -59,18 +61,24 @@ function twtClick() {
         twtBtn.style.backgroundColor = '#3FA3FF';
         twtBtn.style.borderColor = '#FFFFFF';
         twtBtn.style.boxShadow = 'var(--twtBS_b)';
-        twtBtn.style.transform = 'scale(1.1)'
+        twtBtn.style.transform = 'scale(1.1)';
         twtBtn.style.marginTop = '0';
         twtBtn.style.animation = 'transform 100ms linear';
         twtImg.style.filter = 'brightness(0) invert(1) drop-shadow(3px 3px 2px rgba(0, 0, 0, .2))';
 
-        // postButton.style.display = 'block';
-        // message.style.height = 'fit-content';
-        // body.style.height = 'var(--twtH)';
-
         twtBtnIsClick = true;
 
         showWarn();
+
+        if (msgValid) {
+            if (!igBtnIsClick) {
+                postButton.style.display = 'block';
+                message.style.height = 'fit-content';
+                body.style.height = 'var(--twtH)';
+            } else {
+                message.style.height = 'fit-content';
+            }
+        }
     }
     else {
         twtBtn.style.backgroundColor = '#FFFFFF';
@@ -80,13 +88,19 @@ function twtClick() {
         twtBtn.style.animation = 'transform 100ms linear';
         twtImg.style.filter = 'none';
 
-        // postButton.style.display = 'none';
-        // message.style.height = 'var(--msheight)';
-        // body.style.height = 'auto';
-
         twtBtnIsClick = false;
 
         showWarn();
+
+        if (msgValid) {
+            if (!igBtnIsClick) {
+                postButton.style.display = 'none';
+                message.style.height = 'var(--msheight)';
+                body.style.height = 'auto';
+            } else {
+                message.style.height = 'fit-content';
+            }
+        }
     }
 }
 
@@ -132,13 +146,20 @@ function igClick() {
         igBtn.style.animation = 'transform 100ms linear';
         igImg.style.filter = 'brightness(0) invert(1) drop-shadow(3px 3px 2px rgba(0, 0, 0, .2))';
 
-        // igPrev.style.display = 'block';
-        // postButton.style.display = 'block';
-        // body.style.height = 'var(--igH)';
-
         igBtnIsClick = true;
 
         showWarn();
+
+        if (msgValid) {
+            igPrev.style.display = 'block';
+            postButton.style.display = 'block';
+            body.style.height = 'var(--igH)';
+            message.style.height = 'fit-content';
+            if (igFirstClick === false){
+                prevImage.style.borderStyle = 'hidden';
+                igFirstClick = true;
+            }
+        }
     }
     else {
         igBtn.style.borderColor = '#E25B5B';
@@ -148,13 +169,19 @@ function igClick() {
         igBtn.style.animation = 'transform 100ms linear';
         igImg.style.filter = 'none';
 
-        // igPrev.style.display = 'none'
-        // postButton.style.display = 'none'
-        // body.style.height = 'auto';
-
         igBtnIsClick = false;
 
         showWarn();
+
+        if (msgValid) {
+            igPrev.style.display = 'none';
+            if (!twtBtnIsClick) {
+                postButton.style.display = 'none';
+                body.style.height = 'auto';
+            } else {
+                message.style.height = 'fit-content';
+            }
+        }
     }
 }
 
@@ -164,7 +191,7 @@ function showWarn() {
 
         checkMsg();
 
-        if(!msgValid){
+        if (!msgValid) {
 
             msgWarnEle.textContent = msgWarn;
             msgWarnEle.style.display = 'block';
@@ -187,7 +214,7 @@ function showWarn() {
 }
 
 function checkMsg() {
-    
+
     let contentMessage = document.querySelector(".msg-input").value;
     let accCharacters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890 `~!@#$%^&*()-_=+[]{}\\|;:\'",<.>/?';
     let accCharArr = accCharacters.split('');
@@ -233,31 +260,31 @@ function checkMsg() {
 
     if (contentMessage === '') {
 
-        msgWarn = 'Message can\'t be empty!'
+        msgWarn = 'Message can\'t be empty!';
         msgValid = false;
 
         return;
     } else if (contentMessage.length < 6) {
 
-        msgWarn = 'Your message is too short!'
+        msgWarn = 'Your message is too short!';
         msgValid = false;
 
         return;
     } else if (contentMessage.length > 270) {
 
-        msgWarn = 'Your message is too long!'
+        msgWarn = 'Your message is too long!';
         msgValid = false;
 
         return
     } else if (!wordLenValid) {
 
-        msgWarn = 'Your message is invalid!'
+        msgWarn = 'Your message is invalid!';
         msgValid = false;
 
         return;
     } else if (!charValid) {
 
-        msgWarn = 'Your message is invalid!'
+        msgWarn = 'Your message is invalid!';
         msgValid = false;
 
         return;
@@ -270,24 +297,69 @@ function checkMsg() {
 
 const igContentPrev = () => {
 
-    let api = 'https://usayit-api.herokuapp.com/api/igPreview';
     let msgPreview;
 
-    let syncronize = setInterval(async () => {
+    setInterval(async () => {
+
+        checkMsg();
+
+        if (!igBtnIsClick) {
+
+            return;
+
+        }
+
+        if (!msgValid && igPrev.style.display == 'block') {
+
+            igClick();
+            igPrev.style.display = 'none';
+            postButton.style.display = 'none';
+            body.style.height = 'auto';
+            return;
+
+        }
+
+        if (!msgValid) {
+
+            return;
+
+        }
 
         let contentMessage = document.querySelector(".msg-input").value;
         let prevImage = document.getElementById("preview-img");
-        
-        
+        let prevLoad = document.getElementById("preview-loading");
+
+        if (contentMessage !== msgPreview) {
+
+            prevImage.style.display = 'none';
+            prevLoad.style.display = 'block';
+
+        }
 
         fetch('https://usayit-api.herokuapp.com/api/igPreview', {
+
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({text: contentMessage})
-        }).then(response => response.json()).then(response => {prevImage.src = response.image});
 
-    }, 3000)
+        }).then(response => response.json()).then(response => {
+
+            prevImage.src = response.image;
+            prevLoad.style.display = 'none';
+            prevImage.style.borderStyle = 'solid';
+            prevImage.style.display = 'block';
+
+        });
+
+        if (contentMessage !== msgPreview) {
+
+            msgPreview = contentMessage;
+            
+        }
+
+    }, 1000)
 }
+igContentPrev();
