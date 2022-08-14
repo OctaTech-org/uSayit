@@ -403,27 +403,54 @@ const igContentPrev = async () => {
 }
 igContentPrev();
 
-postButton.addEventListener('click', () => {
+postButton.addEventListener('click', async () => {
     let contentMessage = document.querySelector(".msg-input").value.replace(/\s\s+/g, ' ');
+    let statusCode;
 
-    fetch('https://usayit-api.herokuapp.com/api/sendMessage', {
+    let nBorder = document.querySelector(".n-border");
+    let nCont = document.querySelector(".n-cont");
+    let nLoading = document.querySelector(".n-loading");
+    let nSuccess = document.querySelector(".n-success");
+    let nFailed = document.querySelector(".n-failed");
 
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
+    nCont.style.display = "block";
+    nLoading.style.display = "block";
 
-                text: contentMessage,
-                instagram: igBtnIsClick,
-                twtBtnIsClick: twtBtnIsClick
-            
-            })
+    await fetch('https://usayit-api.herokuapp.com/api/sendMessage', {
 
-        }).then(response => response.json()).then(response => {
-            
-            console.log(response);
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
 
-        });
+            text: contentMessage,
+            instagram: igBtnIsClick,
+            twtBtnIsClick: twtBtnIsClick
+        
+        })
+
+    }).then(response => response.json()).then(response => {
+
+        statusCode = JSON.parse(response.statusCode);
+
+    });
+
+    nLoading.style.display = "none";
+
+    if (statusCode === 200){
+
+        nSuccess.style.display = "block";
+        nBorder.style.height = "fit-content";
+        nBorder.style.padding = "6px 1px";
+
+    } else {
+
+        nFailed.style.display = "block";
+        nBorder.style.height = "fit-content";
+        nBorder.style.padding = "6px 1px";
+
+    }
+
 })
