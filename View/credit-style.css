@@ -7,8 +7,8 @@ body{
 }
 
 .container {
-  width: 1440px;
-  height: 700px;
+  width: 100vw;
+  height: 100vh;
   /*background-color: white;
   */
 }
@@ -43,8 +43,7 @@ body{
 }
 
 .usayit-logo img{
-    top: 75px;
-    left: 500px;
+    margin-top: -50px;
     width: 230px;
     position: absolute;
     z-index: 1;
@@ -72,7 +71,6 @@ body{
     margin: 0 auto;
     text-align: center;
     display: flex;
-    margin-left: 500px;
     transition: all 500ms ease-in;
 }
 
