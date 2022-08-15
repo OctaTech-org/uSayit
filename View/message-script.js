@@ -427,7 +427,7 @@ postButton.addEventListener('click', async () => {
 
             text: contentMessage,
             instagram: igBtnIsClick,
-            twtBtnIsClick: twtBtnIsClick
+            twitter: twtBtnIsClick
         
         })
 
