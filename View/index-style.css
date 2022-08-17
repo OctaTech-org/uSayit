@@ -136,55 +136,46 @@ body {
 }
 
 .goMessage {
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-}
-/* header {
     position: absolute;
-    top: 0;
-    left: 0;
     right: 0;
-    width: 80%;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 26.3vw;
 }
 
-.button {
-    display: flex;
-    justify-content: center;
+.goMessage:hover {
+    cursor: pointer;
+    
+    filter: brightness(1) invert(1)
+    /* animation: bounce 1s ease-out; */
 }
 
-.twitter {
-    display: flex;
-    width: 80px;
-    height: 80px;
-    border: 1px solid blue;
-    border-radius: 100px;
-    background: #ffff;
-}
+/* @keyframes bounce {
+    0%,
+    20%,
+    60% {
+        transform: scale(1.07);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-3px) scale(1.03);
+    }
+    80% {
+        transform: translateY(-2px) scale(1.05);
+    }
+} */
 
-.twitter img {
-    margin: auto;
-    width: 46px;
-    height: 37px
-}
-
-.twitter:hover img {
-    filter: brightness(0) invert(1);
-}
-
-.twitter:hover {
-    background-color: #3FA3FF;
-    border-color: white;
-    border-width: 5px;
-}
-
-.instagram {
-    padding: 30px;
-    border: 1px solid red;
-    background: #ffff;
+/* .slogan {
+    margin-left: auto;
+    margin-right: 0px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 36pt;
+    background: -webkit-linear-gradient(#E43CFF, #570A57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 } */
 
