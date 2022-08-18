@@ -15,27 +15,27 @@
 <br><br>
 
 <div align="center">
-	<h2>Information</h2>
+	<h1>Information</h1>
 </div>
-<h3>Tech Stack</h3>
+<h2>Tech Stack</h2>
 - ExpressJS
 - Twitter API
 - Instagram Web API
 - MongoDB
 
-<h3>uSayit Teams:</h3>
+<h2>uSayit Teams:</h2>
 
-- Back-End Developer:
+- <h3>Back-End Developer</h3>
     -
     -
     -
     
-- Front-End Developer:
+- <h3>Front-End Developer</h3>
     -
     -
     -
  
-- UI/UX Designer:
+- <h3>UI/UX Designer</h3>
     -
     -
 
