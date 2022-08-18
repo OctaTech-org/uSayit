@@ -17,7 +17,8 @@
 <div align="center">
 	<h1>Information</h1>
 </div>
-<h2>uSayit Tech Stack</h2>
+<h2>Tech Stack & Project Management App</h2>
+- Notion
 - Vanilla Website (HTML, CSS, JS) <br>
 - ExpressJS <br>
 - Twitter API <br>
