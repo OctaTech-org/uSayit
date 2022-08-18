@@ -17,11 +17,13 @@
 <div align="center">
 	<h1>Information</h1>
 </div>
-<h2>Tech Stack</h2>
+<h2>uSayit Tech Stack</h2>
+- Vanilla Website (HTML, CSS, JS) <br>
 - ExpressJS <br>
 - Twitter API <br>
 - Instagram Web API <br>
 - MongoDB <br>
+- Figma <br>
 
 <br><br>
 
