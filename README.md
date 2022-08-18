@@ -22,7 +22,7 @@
 
 <h2>Tech Stack & Project Management App</h2>
 - Notion <br>
-- Vanilla Website (HTML, CSS, JS) <br>
+- Vanilla Website Development (HTML, CSS, JS) <br>
 - ExpressJS <br>
 - Twitter API <br>
 - Instagram Web API <br>
