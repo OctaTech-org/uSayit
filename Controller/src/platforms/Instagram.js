@@ -37,6 +37,7 @@ class Instagram {
         }).catch((err) => {
 
             console.log('\n\n(Instagram) \x1b[91mERROR:\x1b[0m Platform Status \x1b[91mDisabled\x1b[0m | May something wrong with username or password in config');
+            console.log(err)
             process.exit(1);
 
         });

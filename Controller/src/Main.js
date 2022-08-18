@@ -33,12 +33,11 @@ class Main {
         this.discord = new DiscordBot(this.server.config);
 
         await this.server.database.connect();
+        this.server.postTempData = await this.server.database.getTempHistoryMessage();
+        this.postTempDataSync();
 
         await this.instagram.run();
         await this.discord.login();
-
-        this.server.postTempData = await this.server.database.getTempHistoryMessage();
-        this.postTempDataSync();
 
         this.runAPI();
     }
@@ -282,7 +281,7 @@ class Main {
             
             let previewTxt = req.body.text;
 
-            if(typeof previewTxt !== 'string' || previewTxt.length < 6 || previewTxt.length > 270 || messageTxt[0] === ' ') {
+            if(typeof previewTxt !== 'string' || previewTxt.length < 6 || previewTxt.length > 270 || previewTxt[0] === ' ') {
                 
                 res.status(405).json({
                     
@@ -432,7 +431,7 @@ class Main {
                 return;
             }
         
-            this.discord.sendFeedback(feedbackTxt + '\n\n • IP: ' + clientIP + '\n • Device: ' + deviceInfo);
+            this.discord.sendFeedback(feedbackTxt + '\n\n • IP: ' + ipv4 + '\n • Device: ' + deviceInfo);
         
             res.status(200).json({
 
