@@ -26,17 +26,17 @@
 <h2>uSayit Teams:</h2>
 
 - <h3>Back-End Developer</h3>
-    -
-    -
-    -
+    - <br>
+    - <br>
+    - <br>
     
 - <h3>Front-End Developer</h3>
-    -
-    -
-    -
+    - <br>
+    - <br>
+    - <br>
  
 - <h3>UI/UX Designer</h3>
-    -
-    -
+    - <br>
+    - <br>
 
 <p align="center">uSayit | 2022</p>
