@@ -16,7 +16,6 @@ let igBtnIsClick = false;
 let igFirstClick = false;
 let msgValid = true;
 let msgWarn;
-let err = false
 
 twtBtn.addEventListener('mouseenter', twtMouseEnter);
 twtBtn.addEventListener('mouseleave', twtMouseLeave);
@@ -321,6 +320,8 @@ const igContentPrev = async () => {
 
     let msgPreview;
     let delay = 100;
+    let err = false;
+
 
     while(true) {
 
@@ -333,6 +334,10 @@ const igContentPrev = async () => {
             igClick();
             err = true;
 
+        }
+
+        if (!msgValid && twtBtnIsClick) {
+            console.log('aa')
         }
 
         if (!igBtnIsClick) {
@@ -406,6 +411,10 @@ igContentPrev();
 postButton.addEventListener('click', async () => {
     let contentMessage = document.querySelector(".msg-input").value.replace(/\s\s+/g, ' ');
     let statusCode;
+    let userIp;
+    let deviceInfo = (clientInformation.appVersion).match(/\((.*?)\)/g)[0];
+    let failEle = document.querySelector(".n-failed p");
+    let failMessage;
 
     let nBorder = document.querySelector(".n-border");
     let nCont = document.querySelector(".n-cont");
@@ -415,6 +424,8 @@ postButton.addEventListener('click', async () => {
 
     nCont.style.display = "block";
     nLoading.style.display = "block";
+
+    await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(res => userIp = res.ip);
 
     await fetch('https://usayit-api.herokuapp.com/api/sendMessage', {
 
@@ -427,13 +438,16 @@ postButton.addEventListener('click', async () => {
 
             text: contentMessage,
             instagram: igBtnIsClick,
-            twitter: twtBtnIsClick
+            twitter: twtBtnIsClick,
+            ipv4: userIp,
+            deviceInfo: deviceInfo
         
         })
 
     }).then(response => response.json()).then(response => {
 
-        statusCode = JSON.parse(response.statusCode);
+        statusCode = response.statusCode;
+        failMessage = response.message;
 
     });
 
@@ -447,10 +461,11 @@ postButton.addEventListener('click', async () => {
 
     } else {
 
+        failEle.innerHTML = failMessage;
         nFailed.style.display = "block";
         nBorder.style.height = "fit-content";
         nBorder.style.padding = "6px 1px";
 
     }
 
-})
+});
