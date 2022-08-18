@@ -21,7 +21,7 @@
 <br><br>
 
 <h2>Tech Stack & Project Management App</h2>
-- Notion
+- Notion <br>
 - Vanilla Website (HTML, CSS, JS) <br>
 - ExpressJS <br>
 - Twitter API <br>
