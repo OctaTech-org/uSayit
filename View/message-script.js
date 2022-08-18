@@ -337,8 +337,10 @@ const igContentPrev = async () => {
         }
 
         if (!msgValid && twtBtnIsClick) {
+
             postButton.style.display = 'none';
             body.style.height = 'auto';
+            
         }
 
         if (!igBtnIsClick) {
