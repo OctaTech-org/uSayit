@@ -5,7 +5,7 @@ import jimp from "jimp";
 class ImageManipulation {
     async preview(text) {
         const __dirname = dirname(fileURLToPath(import.meta.url));
-        let textFrame = await jimp.read(__dirname + '/../resources/Text-Frame.png');
+        let textFrame = await jimp.read(__dirname + '/../../server_data/instagram/template/Text-Frame.png');
         let font = await jimp.loadFont(jimp.FONT_SANS_32_BLACK);
         
         textFrame.print(font, 0, 0, {
@@ -14,7 +14,7 @@ class ImageManipulation {
         alignmentY: jimp.VERTICAL_ALIGN_MIDDLE
         }, 560, 360);
 
-        let template = await jimp.read(__dirname + '/../resources/Template.png');
+        let template = await jimp.read(__dirname + '/../../server_data/instagram/template/Template.png');
         template.composite(textFrame, 80, 180);
         
         let image = await template.getBase64Async(jimp.MIME_PNG)
@@ -22,9 +22,9 @@ class ImageManipulation {
         return image;
     }
 
-    async save(text, timestamp) {
+    async save(text, uuid) {
         const __dirname = dirname(fileURLToPath(import.meta.url));
-        let textFrame = await jimp.read(__dirname + '/../resources/Text-Frame.png');
+        let textFrame = await jimp.read(__dirname + '/../../server_data/instagram/template/Text-Frame.png');
         let font = await jimp.loadFont(jimp.FONT_SANS_32_BLACK);
         
         textFrame.print(font, 0, 0, {
@@ -33,9 +33,9 @@ class ImageManipulation {
         alignmentY: jimp.VERTICAL_ALIGN_MIDDLE
         }, 560, 360);
 
-        let template = await jimp.read(__dirname + '/../resources/Template.png');
+        let template = await jimp.read(__dirname + '/../../server_data/instagram/template/Template.png');
         template.composite(textFrame, 80, 180);
-        await template.writeAsync(__dirname + "/../../server_data/igFeed/" + timestamp + ".jpg");
+        await template.writeAsync(__dirname + "/../../server_data/instagram/image_temp/" + uuid + ".jpg");
 
         return true;
     }
