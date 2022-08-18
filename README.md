@@ -17,6 +17,9 @@
 <div align="center">
 	<h1>Information</h1>
 </div>
+
+<br><br>
+
 <h2>Tech Stack & Project Management App</h2>
 - Notion
 - Vanilla Website (HTML, CSS, JS) <br>
