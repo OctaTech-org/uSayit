@@ -18,10 +18,12 @@
 	<h1>Information</h1>
 </div>
 <h2>Tech Stack</h2>
-- ExpressJS
-- Twitter API
-- Instagram Web API
-- MongoDB
+- ExpressJS <br>
+- Twitter API <br>
+- Instagram Web API <br>
+- MongoDB <br>
+
+<br><br>
 
 <h2>uSayit Teams:</h2>
 
