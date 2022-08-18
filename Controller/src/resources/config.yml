@@ -1,0 +1,18 @@
+# Configuration
+
+database:
+  auth: ''
+
+platforms:
+  instagram:
+    username: ''
+    password: ''
+
+  twitter:
+    apiKey: ''
+    apiSecret: ''
+    accessToken: ''
+    accessSecret: ''
+
+  discordBot:
+    token: ''

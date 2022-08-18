@@ -16,9 +16,11 @@
     "fs-extra": "^10.1.0",
     "instagram-web-api": "^2.2.2",
     "jimp": "^0.16.1",
+    "js-yaml": "^4.1.0",
     "mongodb": "^4.7.0",
     "sequelize": "^6.21.2",
     "tough-cookie-filestore2": "^1.0.0",
-    "twitter-api-v2": "^1.12.3"
+    "twitter-api-v2": "^1.12.3",
+    "uuid": "^8.3.2"
   }
 }

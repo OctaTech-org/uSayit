@@ -2,8 +2,9 @@ import {Client, Intents} from 'discord.js';
 
 class DiscordBot {
     
-    constructor() {
+    constructor(config) {
 
+        this.config = config;
         this.bot = new Client({
 
             intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]
@@ -15,7 +16,16 @@ class DiscordBot {
 
     async login() {
 
-        await this.bot.login("OTk0OTcxNDQyNDQzNzE4Njk2.GTBH2Y.cN_mzyHBp0ySwbBjfARW1EAss-eznI89MJVzwk");
+        await this.bot.login(this.config.platforms.discordBot.token).then(() => {
+
+            console.log('\n\n(Discord Bot): Platform Status \x1b[93mEnabled\x1b[0m');
+
+        }).catch((err) => {
+
+            console.log('\n\n(Discord Bot) \x1b[91mERROR:\x1b[0m Platform Status \x1b[91mDisabled\x1b[0m | May something wrong with Bot Token in config');
+            process.exit(1);
+
+        });
         
         return;
     }
