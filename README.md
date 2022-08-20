@@ -20,7 +20,7 @@
 
 <br><br>
 
-<h2 align="center">Techn Stack & Application</h2>
+<h2 align="center">Tech Stack & Application</h2>
 <p>Technologies and Application that help uSayit development</p>
 
 <p><b>Database</b>: MongoDB</p>
