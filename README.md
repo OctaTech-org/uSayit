@@ -6,7 +6,7 @@
 		(This app is built for learning and experience)
 	</p>
 </div>
-    <br><br>
+    <br>
     <h3>uSayit available various platforms such as:</h3>
     🔹 Instagram (<a href="https://www.instagram.com/usayit.id">Click Here</a>)
     <br>
