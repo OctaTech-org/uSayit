@@ -1,33 +1,39 @@
 <div align="center">
-  <img src="uSayit.png" alt="Your image url" width="200" height="200">
-  <br><br>
+	<img src="https://github.com/OctaTech-org/uSayit/blob/main/uSayit.png?raw=true" alt="Your image url" width="200" height="200">
+	<br><br>
+	<h1>uSayit</h1>
 	<p>
 		uSayit was built to give netizens the freedom of speech whatever they want to convey through many social media platforms, the message is anonymous, and can be seen by the general public. <br>
 		(This app is built for learning and experience)
 	</p>
 </div>
-    <br><br>
-    <h3>uSayit available various platforms such as:</h3>
-    🔹 Instagram (<a href="https://www.instagram.com/usayit.id">Click Here</a>)
-    <br>
-    🔹 Twitter (<a href="https://twitter.com/usayit_">Click Here</a>)
+<div>    
+	<h3>uSayit available various platforms:</h3>
+	<p>&emsp;🔹 Instagram (<a href="https://www.instagram.com/usayit.id">Click Here</a>) </p>
+	<p>&emsp;🔹 Twitter (<a href="https://twitter.com/usayit_">Click Here</a>)</p>
+</div>
     
 <br><br>
 
-<div align="center">
-	<h1>Information</h1>
-</div>
-
-<br><br>
-
-<h2>Tech Stack & Project Management App</h2>
-- Notion <br>
-- Vanilla Website Development (HTML, CSS, JS) <br>
-- ExpressJS <br>
-- Twitter API <br>
-- Instagram Web API <br>
-- MongoDB <br>
-- Figma <br>
+<h2>Application & Tech Stack:</h2>
+<p>&emsp;➤ <b>Project Management</b>:</p>
+<p>&emsp;&emsp;• Notion</p>
+<br>
+<p>&emsp;➤ <b>Back-End</b>:</p>
+<p>&emsp;&emsp;Database: MongoDB</p>
+<p>&emsp;&emsp;NodeJS: </p>
+<p>&emsp;&emsp;&emsp;• ExpressJS</p>
+<p>&emsp;&emsp;&emsp;• Mongoose</p>
+<p>&emsp;&emsp;&emsp;• UUIDv4</p>
+<p>&emsp;&emsp;&emsp;• JIMP</p>
+<p>&emsp;&emsp;&emsp;• Twitter-API-v2</p>
+<p>&emsp;&emsp;&emsp;• Instagram-Web-API</p>
+<br>
+<p>&emsp;➤ <b>Front-End</b>:</p>
+<p>&emsp;&emsp;• Vanilla Website</p>
+<br>
+<p>&emsp;➤ <b>UI/UX Design</b>:</p>
+<p>&emsp;&emsp;• Figma</p>
 
 <br><br>
 
