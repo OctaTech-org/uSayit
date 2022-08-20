@@ -6,7 +6,7 @@
 		(This app is built for learning and experience)
 	</p>
 </div>
-    <br><br>
+    <br>
     <h3>uSayit available various platforms such as:</h3>
     🔹 Instagram (<a href="https://www.instagram.com/usayit.id">Click Here</a>)
     <br>
@@ -15,23 +15,33 @@
 <br><br>
 
 <div align="center">
-	<h1>Information</h1>
+	<h1>Development Information</h1>
 </div>
 
+<h2 align="center">Tech Stack & Application</h2>
+<p>Technologies and Application that help uSayit development</p>
+
+<p><b>Database</b>: MongoDB</p>
+
+<details>
+  <summary><b>Back-End</b>:</summary>
+  <ul>
+    <li>NodeJS</li>
+    <li>Mongoose</li>
+    <li>ExpressJS</li>
+    <li>JIMP</li>
+    <li>Twitter-API-v2</li>
+    <li>Instagram-Web-API</li>
+  </ul>
+</details>
+
+<p><b>Front-End</b>: Vanilla Website (HTML, CSS, JS)</p>
+
+<p><b>UI/UX Design</b>: Figma</p>
+
 <br><br>
 
-<h2>Tech Stack & Project Management App</h2>
-- Notion <br>
-- Vanilla Website Development (HTML, CSS, JS) <br>
-- ExpressJS <br>
-- Twitter API <br>
-- Instagram Web API <br>
-- MongoDB <br>
-- Figma <br>
-
-<br><br>
-
-<h2>uSayit Teams:</h2>
+<h2 align="center">uSayit Teams:</h2>
 
 - <h3>Back-End Developer</h3>
     - <br>
