@@ -15,10 +15,8 @@
 <br><br>
 
 <div align="center">
-	<h1>Information</h1>
+	<h1>Development Information</h1>
 </div>
-
-<br>
 
 <h2 align="center">Tech Stack & Application</h2>
 <p>Technologies and Application that help uSayit development</p>
