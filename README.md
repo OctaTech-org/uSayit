@@ -1,27 +1,22 @@
 <div align="center">
-  <img src="uSayit.png" alt="Your image url" width="200" height="200">
-  <br><br>
+	<img src="uSayit.png" alt="Your image url" width="200" height="200">
+	<br><br>
 	<p>
 		uSayit was built to give netizens the freedom of speech whatever they want to convey through many social media platforms, the message is anonymous, and can be seen by the general public. <br>
 		(This app is built for learning and experience)
 	</p>
 </div>
-    <br>
-    <h3>uSayit available various platforms such as:</h3>
-    🔹 Instagram (<a href="https://www.instagram.com/usayit.id">Click Here</a>)
-    <br>
-    🔹 Twitter (<a href="https://twitter.com/usayit_">Click Here</a>)
+<div>    
+	<h3>uSayit available various platforms such as:</h3>
+	<p>&emsp;🔹 Instagram (<a href="https://www.instagram.com/usayit.id">Click Here</a>) </p>
+	<p>&emsp;🔹 Twitter (<a href="https://twitter.com/usayit_">Click Here</a>)</p>
+</div>
     
 <br><br>
 
-<div align="center">
-	<h1>Development Information</h1>
-</div>
-
-<h2 align="center">Tech Stack & Application</h2>
-<p>Technologies and Application that help uSayit development</p>
-
-<p><b>Database</b>: MongoDB</p>
+<h2 align="center">Development Information</h2>
+<h3>Application & Tech Stack:</h3>
+<p>&emsp;<b>Back-End</b>:</p>
 
 <details>
   <summary><b>Back-End</b>:</summary>
