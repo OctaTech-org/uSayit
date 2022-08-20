@@ -20,18 +20,30 @@
 
 <br><br>
 
-<h2>Tech Stack & Project Management App</h2>
-- Notion <br>
-- Vanilla Website Development (HTML, CSS, JS) <br>
-- ExpressJS <br>
-- Twitter API <br>
-- Instagram Web API <br>
-- MongoDB <br>
-- Figma <br>
+<h2 align="center">Techn Stack & Application</h2>
+<p>Technologies and Application that help uSayit development</p>
+
+<p><b>Database</b>: MongoDB</p>
+
+<details>
+  <summary><b>Back-End</b>:</summary>
+  <ul>
+    <li>NodeJS</li>
+    <li>Mongoose</li>
+    <li>ExpressJS</li>
+    <li>JIMP</li>
+    <li>Twitter-API-v2</li>
+    <li>Instagram-Web-API</li>
+  </ul>
+</details>
+
+<p><b>Front-End</b>: Vanilla Website (HTML, CSS, JS)</p>
+
+<p><b>UI/UX Design</b>: Figma</p>
 
 <br><br>
 
-<h2>uSayit Teams:</h2>
+<h2 align="center">uSayit Teams:</h2>
 
 - <h3>Back-End Developer</h3>
     - <br>
