@@ -821,7 +821,7 @@ body::-webkit-scrollbar-thumb {
 
 @keyframes top {
     10% {
-        transform: translateY(-40px);
+        transform: translateY(-5vh);
     }
     20%, 100% {
         transform: translateY(0);
@@ -837,7 +837,6 @@ body::-webkit-scrollbar-thumb {
 
     * {
         cursor: default;
-        overflow-x: hidden;
     }
 
     .header .logo {
@@ -857,6 +856,10 @@ body::-webkit-scrollbar-thumb {
     
     .saywhat span {
         font-size: 4vw;
+    }
+
+    .goMessage img.bottom {
+        width: 100vw;
     }
 
     .platform {
@@ -915,8 +918,8 @@ body::-webkit-scrollbar-thumb {
         right: 0;
         left: 0;
         width: fit-content;
-        height: 10vh;
-        margin: calc(100vh - 70px) auto;
+        height: fit-content;
+        margin: calc(100vh - 50px) auto;
     }
 
     .scroll h1 {
@@ -945,6 +948,7 @@ body::-webkit-scrollbar-thumb {
     
     .msg-example div {
         margin-top: 30px;
+        overflow-x: hidden;
     }
     
     .msg-example p {
@@ -1045,9 +1049,8 @@ body::-webkit-scrollbar-thumb {
     }
     
     .faq h2 {
-        margin-top: 1vw;
         margin-left: 9vw;
-        line-height: 6vw;
+        line-height: 7vw;
         font-size: 3.5vw;
     }
 
