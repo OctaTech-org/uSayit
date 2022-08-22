@@ -933,6 +933,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     .msg-example {
+        overflow-x: hidden;
         height: 190px;
         border-width: 5px;
     }
