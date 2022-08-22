@@ -821,7 +821,7 @@ body::-webkit-scrollbar-thumb {
 
 @keyframes top {
     10% {
-        transform: translateY(-10px);
+        transform: translateY(-20px);
     }
     20%, 100% {
         transform: translateY(0);
@@ -915,8 +915,8 @@ body::-webkit-scrollbar-thumb {
         right: 0;
         left: 0;
         width: fit-content;
-        height: fit-content;
-        margin: calc(100vh - 40px) auto;
+        height: 10vh;
+        margin: calc(100vh - 70px) auto;
     }
 
     .scroll h1 {
@@ -1045,8 +1045,9 @@ body::-webkit-scrollbar-thumb {
     }
     
     .faq h2 {
+        margin-top: 1vw;
         margin-left: 9vw;
-        line-height: 7vw;
+        line-height: 6vw;
         font-size: 3.5vw;
     }
 
