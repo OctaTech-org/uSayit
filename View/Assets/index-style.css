@@ -929,7 +929,7 @@ body::-webkit-scrollbar-thumb {
     .scroll img {
         width: 35px;
         opacity: .8;
-        animation: top 4s infinite 2s;
+        animation: top 5s infinite 2s;
     }
 
     .tagline {
@@ -939,6 +939,7 @@ body::-webkit-scrollbar-thumb {
     .msg-example {
         height: 190px;
         border-width: 5px;
+        overflow-x: hidden;
     }
     
     .msg-example h1 {
@@ -953,11 +954,13 @@ body::-webkit-scrollbar-thumb {
     
     .msg-example p {
         font-size: 8vw;
+        overflow-x: hidden;
     }
     
     .msg-example p:before {
         left: 25vw;
         border-width: 2px;
+        overflow-x: hidden;
     }
 
     @keyframes animate {
