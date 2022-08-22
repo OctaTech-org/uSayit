@@ -144,6 +144,8 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
 
     position: absolute;
+    width: fit-content;
+    height: fit-content;
     top: 0;
     right: 0;
     bottom: 0;
@@ -155,39 +157,39 @@ body::-webkit-scrollbar-thumb {
     font-size: 2.2vw;
 }
 
-.aMsg {
+.a-msg {
     margin: calc(50vh - (var(--sayH)/2)) auto 0;
 }
 
-.goMessage {
+.go-message {
     width: var(--sayW);
     display: flex;
     justify-content: center;
 }
 
-.goMessage img {
+.go-message img {
     transition: opacity .1s ease-in-out;
 }
 
-.goMessage img.top {
+.go-message img.top {
     position: absolute;
     z-index: 1;
     margin-top: 0.5vw;
     height: var(--sayH);
 }
 
-.goMessage img.bottom {
+.go-message img.bottom {
     z-index: 0;
     height: calc(var(--sayH) + 1vw);
     opacity: 0;
 }
 
-.goMessage img.top:hover {
+.go-message img.top:hover {
     cursor: pointer;
     opacity: 0;
 }
 
-.goMessage img.top:hover + img.bottom {
+.go-message img.top:hover + img.bottom {
     opacity: 1;
     height: calc(var(--sayH) + 1vw);
 }
@@ -382,6 +384,7 @@ body::-webkit-scrollbar-thumb {
 
 .safe img {
     position: absolute;
+    z-index: 1;
     top: 7.5vw;
     left: 20.5vw;
     width: 5vw;
@@ -858,7 +861,7 @@ body::-webkit-scrollbar-thumb {
         font-size: 4vw;
     }
 
-    .goMessage img.bottom {
+    .go-message img.bottom {
         width: 100vw;
     }
 
