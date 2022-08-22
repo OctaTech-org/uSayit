@@ -269,7 +269,8 @@ body {
     position: absolute;
     z-index: 1;
     right: calc((50vw - (var(--mswidth)/2)) - 100px);
-    top: calc((50vh - (var(--msheight)/2)) - 160px);
+    top: calc((50vh - (var(--msheight)/2)) - 200px);
+    transform: rotate(30deg);
     user-select: none;
 }
 

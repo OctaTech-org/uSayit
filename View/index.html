@@ -4,30 +4,223 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uSay!t</title>
-    <link href="index-style.css" rel="stylesheet" type="text/css"/>
+    <title>uSayit</title>
+    <link href="Assets/index-style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <div class="header">
-        <img src="material/LandingPage-material/Logo.png" class="logo"/>
-        <div class="platform">
-            <h2>Available Platforms</h2>
-            <div class="button">
-                <div class="twitter"><img src="material/twt.svg"></div>
-                <div class="instagram"><img src="material/ig.svg"></div>
+    <div class="n-cont">
+        <div class="n-bg">
+            <div class="n-border">
+                <div class="n-blank">
+                    <div class="n-loading">
+                        <h1>Sending feedback...</h1>
+                        <div class="n-element"></div>
+                    </div>
+                    <div class="n-success">
+                        <svg class="n-icon" viewBox="0 0 130.2 130.2">
+                            <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+                            <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+                        </svg>
+                        <h1>Success!</h1>
+                        <p>Thanks for your feedback to helping and making uSayit better</p>
+                        <a href="index-test.html"><div class="n-btn n-done">DONE</div></a>
+                    </div>
+                    <div class="n-failed">
+                        <svg class="n-icon" viewBox="0 0 130.2 130.2">
+                            <circle class="path circle" fill="none" stroke="#D06079" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+                            <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="34.4" y1="37.9" x2="95.8" y2="92.3"/>
+                            <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2"/>
+                        </svg>
+                        <h1>Failed!</h1>
+                        <p>Failed to send feedback, please try again later</p>
+                        <a href="index-test.html"><div class="n-btn n-close">CLOSE</div></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <p class="saywhat">SAY WHATEVER YOU WANT <br> <span>WITH THIS BUTTON</span></p>
-    <img src="material/LandingPage-material/SayIt-button.svg" class="goMessage">
-    <div class="slogan">
-        <p class="one">Be Anonymous<br><span>Write Anything</span></p>
-        <p class="two">Be Supportive<br><span>Motive Everyone</span></p>
-        <p class="three">Be Yourself<br><span>Express Feeling</span></p>
+    <div class="header">
+        <img src="Assets/material/usayit-logo.png" class="logo"/>
+        <div class="platform">
+            <h2>Available Platforms</h2>
+            <div class="button">
+                <a href="https://twitter.com/usayit_" target="_blank"><div class="twitter"><img src="Assets/material/twt.svg"></div></a>
+                <a href="https://www.instagram.com/usayit.id/" target="_blank"><div class="instagram"><img src="Assets/material/ig.svg"></div></a>
+            </div>
+        </div>
+        <p class="saywhat">SAY WHATEVER YOU WANT <br> <span>WITH THIS BUTTON</span></p>
+        <a class="aMsg" href="Message.html">
+            <div class="goMessage">
+                <img class="top" src="Assets/material/SayIt-button.png" draggable="false">
+                <img class="bottom" src="Assets/material/SayIt-button(hover).png" draggable="false">
+            </div>
+        </a>
+        <div class="scroll">
+            <img src="Assets/material/down-arrow.png">
+            <h1>KEEP SCROLLING</h1>
+        </div>
+        <div class="tagline">
+            <div class="t1"><h1>Be Anonymous</h1><p>Write Anything</p></div>
+            <div class="t2"><h1>Be Supportive</h1><p>Motive Everyone</p></div>
+            <div class="t3"><h1>Be Yourself</h1><p>Express Feelings</p></div>
+        </div>
     </div>
-    <ul class="keepscroll">
-        <li>KEEP SCROLLING</li>
-    </ul>
-    
+    <div class="msg-example">
+        <h1>Send Message Such as</h1>
+        <div>
+            <p class="text" id="shadow">SUGGEST</p>
+            <p class="text" id="color">SUGGEST</p>
+        </div>
+    </div>
+    <div class="definition">
+        <h1>So, What is <img src="Assets/material/usayit-logo.png" draggable="false"> ?</h1>
+        <p>Just Imagine a platform where you can say whatever you want as anonymous, just be yourself at this time. We have the rights to express our feelings without worried about others judgement.</p>
+        <p>uSay!t provides the free spaces for all of you to say your words. With only a few clicks and the words will be sent to various social media.</p>
+    </div>
+    <div class="safe">
+        <h1>Keep it <span>Safe</span> with uS !</h1>
+        <img class="shield" src="Assets/material/shield.png" draggable="false">
+        <div class="terms"><p>We expected that users comply with the terms of service policy on each social media platform that we provide. To ensure safety on uSay!t, we filter some words that are harsh, offensive, harmful, bullying, and others. The system stores users personal data in case of a violation. Posts will also be deleted automatically by the system or manually by the admin if the message contains things that are not supposed to.</p></div>
+        <h2>Contact us regarding safety on <a href="https://mail.google.com/mail/?view=cm&fs=1&to=octatech.id@gmail.com" target="_blank"><span>octatech.id@gmail.com</span></a></h2>
+    </div>
+    <div class="faq">
+        <div class="cont">
+            <h1>FAQ</h1>
+            <div class="section">
+                <div class="mark"><span>?</span></div>
+                <h2>Why the name is uSay!t?</h2>
+                <p>You say whatever your heart wanna say. It can be pronounced like "You Say It".</p>
+            </div>
+            <div class="section">
+                <div class="mark"><span>?</span></div>
+                <h2>What's the purpose?</h2>
+                <p>We want to give users the freedom of speech whatever they want to convey<br>through social media, the message is anonymous, and can be seen by the general public.</p>
+            </div>
+            <div class="section">
+                <div class="mark"><span>?</span></div>
+                <h2>Who built it?</h2>
+                <p>uSay!t was bult by software engineer students in Indonesia.<br>Check credits page for more details.</p>
+            </div>
+            <div class="section">
+                <div class="mark"><span>?</span></div>
+                <h2>When was it launched?</h2>
+                <p>uSay!t was launched on August 2022 in Indonesia.</p>
+            </div>
+            <div class="section">
+                <div class="mark"><span>?</span></div>
+                <h2>Where's it available?</h2>
+                <p>For now, uSay!t is only intended for Indonesian netizens.<br>But we are looking forward to expand this. Stay tune worlds~</p>
+            </div>
+            <div class="section">
+                <div class="mark"><span>?</span></div>
+                <h2>How does it work?</h2>
+                <p>Go to the head of this webpage and click the [SAY !T] Button. Then just type the message<br>and choose the available social media platform. KACHING!! You just say it.</p>
+            </div>
+            <div class="section">
+                <div class="mark"><span>?</span></div>
+                <h2>May i give advice and do request?</h2>
+                <p>Sure, you can do that. Just give your feedback down below and we will accept any<br>critics, comments, advices, and requests. Feedbacks from you will support uSay!t to be better.</p>
+            </div>
+        </div>
+    </div>
+    <div class="feedback">
+        <h1>FEEDBACK</h1>
+        <textarea class="input" type="text" placeholder="Type your words here..." onfocus="this.placeholder = ''"
+        onblur="this.placeholder = 'Type your words here...'" spellcheck="false" maxlength="314"></textarea>
+        <div class="submit">SUBM!T</div>
+    </div>
+    <div class="footer">
+        <div class="f-bg">
+            <img src="Assets/material/usayit-logo.png" draggable="false">
+            <h1>All Rights Reserved | Copyright © 2022</h1>
+            <a href="Credit.html"><div class="credit">CRED!TS</div></a>
+        </div>
+    </div>
+    <script>
+        const typeAnimation = async () => {
+            let wordsList = ['ADVICE', 'JOKES', 'ASKING', 'NEWS', 'CONFESS', 'QUOTE', 'GOSSIP', 'OFFEND', 'POEM', 'OFFER', 'JUSTIFY', 'SUGGEST'];
+            let textElement = document.querySelectorAll('.text')
+            let curIndex = 0;
+            let first = false;
+
+            textElement[0].style.display = "block";
+            textElement[1].style.display = "block";
+
+            setInterval(() => {
+                if (!first){
+                    
+                    textElement[0].style.display = "none";
+                    textElement[1].style.display = "none";
+                    textElement[0].style.display = "block";
+                    textElement[1].style.display = "block";
+
+                    first = true;
+                }
+
+                if (curIndex > wordsList.length-1) {
+                    curIndex = 0;
+                }
+
+                textElement[0].innerHTML = wordsList[curIndex];
+                textElement[1].innerHTML = wordsList[curIndex];
+                curIndex++;
+
+            }, 2000);
+
+        }
+        typeAnimation();
+
+        let feedbackMsg = document.querySelector('.input');
+        let feedbackBtn = document.querySelector('.submit');
+        let nCont = document.querySelector('.n-cont');
+        let nBorder = document.querySelector('.n-border');
+        let nLoading = document.querySelector('.n-loading');
+        let nSuccess = document.querySelector('.n-success');
+        let nFailed = document.querySelector('.n-failed');
+        let userIp;
+        let deviceInfo = (clientInformation.appVersion).match(/\((.*?)\)/g)[0];
+
+        feedbackBtn.addEventListener('click', async () => {
+
+            nCont.style.display = 'block';
+            nLoading.style.display = 'block';
+
+            await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(res => userIp = res.ip);
+
+            await fetch('https://usayit-api.herokuapp.com/api/sendFeedback', {
+
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+
+                    text: feedbackMsg.value,
+                    ipv4: userIp,
+                    deviceInfo: deviceInfo
+                
+                })
+
+            }).then(response => response.json()).then(response => {
+
+                nLoading.style.display = 'none';
+                nBorder.style.height = 'fit-content';
+                nBorder.style.padding = 'var(--bPad)';
+
+                if (response.statusCode === 200) {
+                    
+                    nSuccess.style.display = 'block';
+
+                } else {
+
+                    nFailed.style.display = 'block';
+                    
+                }
+
+            });
+
+        })
+    </script>
 </body>
 </html>
