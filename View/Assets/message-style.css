@@ -265,13 +265,14 @@ body {
 }
 
 .logo {
-    pointer-events: none;
     position: absolute;
     z-index: 1;
-    right: calc((50vw - (var(--mswidth)/2)) - 100px);
-    top: calc((50vh - (var(--msheight)/2)) - 200px);
+    right: calc((50vw - (var(--mswidth)/2)));
+    top: calc((50vh - (var(--msheight)/2)));
     transform: rotate(30deg);
     user-select: none;
+    pointer-events: none;
+    background-color: red;
 }
 
 .n-cont {
