@@ -839,10 +839,6 @@ body::-webkit-scrollbar-thumb {
         cursor: default;
     }
 
-    body {
-        overflow-x: hidden;
-    }
-
     .header .logo {
         width: 120px;
         top: 0;
