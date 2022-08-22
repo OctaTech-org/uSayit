@@ -17,7 +17,7 @@
 
 <h2>Application & Tech Stack:</h2>
 <p>&emsp;➤ <b>Project Management</b>:</p>
-<p>&emsp;&emsp;• Notion</p>
+<p>&emsp;&emsp;• Notion (<a href="Project Mono.md">See more</a>)</p>
 <br>
 <p>&emsp;➤ <b>Back-End</b>:</p>
 <p>&emsp;&emsp;Database: MongoDB</p>
