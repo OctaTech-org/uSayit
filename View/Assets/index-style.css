@@ -278,6 +278,7 @@ body::-webkit-scrollbar-thumb {
 
 .msg-example div {
     margin-top: 3.5vw;
+    overflow-x: hidden;
 }
 
 .msg-example p {
@@ -288,6 +289,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 4.5vw;
     font-weight: 900;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .msg-example p#color {
@@ -304,7 +306,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .msg-example p:before {
-    overflow-x: hidden;
     content: "";
     position: absolute;
     top: 0;
@@ -314,6 +315,7 @@ body::-webkit-scrollbar-thumb {
     background-color: #FFFFFF;
     border-left: 4px solid #6a1470;
     animation: animate 2s steps(180) infinite;
+    overflow-x: hidden;
 }
 
 .definition {
