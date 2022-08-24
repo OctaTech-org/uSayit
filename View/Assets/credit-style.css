@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
 
 body{
     background-image: url("material/background.jpg");
@@ -6,376 +6,234 @@ body{
     overflow: hidden;  
 }
 
-.container {
-  width: 100vw;
-  height: 100vh;
-  /*background-color: white;
-  */
+a {
+    text-decoration: none;
 }
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
 .back-button {
     background-color: white;
-    width: 170px;
-    height: 50px;
-    margin-left: 25px;
-    margin-top: 25px;
-    border-radius: 15px;
-    border: 5px solid #FFFFFF;
+    width: 10vw;
+    height: 3.5vw;
+    margin-left: 1vw;
+    margin-top: 1.5vw;
+    border-radius: 1.2vw;
+    border: .4vw solid #FFFFFF;
     background: linear-gradient(114.33deg, #DC92FF 0%, #9747FF 99.01%);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 2px 2px 5px #FFFFFF;
-    backdrop-filter: blur(4px);
+    box-shadow: .2vw .2vw 1vw rgba(0, 0, 0, 0.5), inset .1vw .1vw .5vw #FFFFFF;
     text-align: center;
-    transition: all 500ms ease-in;
+    transition: all 300ms ease-in;
 }
 
 .back-button #text {
     color: #FFFFFF;
     font-family: 'Montserrat';
-    font-size: 30px;
-    line-height: 50px;
+    font-size: 1.8vw;
+    line-height: 3.5vw;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    font-weight: 900;
 }
 
 .back-button:hover {
-    cursor: pointer;
     background: linear-gradient(114.33deg, #9747FF 0%, #DC92FF 99.01%);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: .2vw .2vw 1vw rgba(0, 0, 0, 0.5), inset .1vw .1vw .5vw rgba(0, 0, 0, 0.25);
     transition: all 300ms ease-out;
 }
 
-.usayit-logo img{
-    margin-top: -50px;
-    width: 230px;
-    position: absolute;
-    z-index: 1;
-    transition: all 500ms ease-in;
-}
-
-.otech {
-    width: 500px;
-    height: 240px;
-}
-.ologo {
-    position: absolute;
-    top: 150px;
-    bottom: 150px;
-}
-
 .circle-otech {
-    width: 500px;
-    height: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 30vw;
+    height: 30vw;
     background-color: rgba(96, 148, 174, 0.75);
     box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    border: 15px solid #FFFFFF;
-    backdrop-filter: blur(4px);
-    margin: 0 auto;
+    border: 1vw solid #FFFFFF;
+    margin: calc((100vh - 32vw) / 2) auto;
     text-align: center;
     display: flex;
     transition: all 500ms ease-in;
 }
 
-.circle-uiux {
-    width: 150px;
-    height: 150px;
+.otech-logo {
+    position: absolute;
+    top: 3vw;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.otech-logo img {
+    width: 10vw;
+    margin: auto;
+}
+
+.usayit-logo img{
+    margin-top: -3.3vw;
+    width: 16vw;
+    position: absolute;
+    z-index: 1;
+    transition: all 500ms ease-in;
+}
+
+.circle {
     background-color: rgb(255, 255, 255);
-    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.5), inset 2px 2px 10px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    opacity: 100%;
-    border: 7px solid #000000;
-    margin-top: 45px;
-    margin-left: 410px;
+    border: .5vw solid #000000;
     position: absolute;
     text-align: center;
     transition: all 300ms ease-in;
 }
 
-.circle-uiux #text-uiux {
-    color: #000000;
-    font-family: 'Montserrat';
-    font-size: 30px;
-    line-height: 150px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-    transition: all 300ms ease-in;
+.circle:hover {
+    cursor: pointer;
+    background: linear-gradient(135deg, #22DDD2 0%, rgba(34, 221, 210, 0) 100%);
+    backdrop-filter: blur(10px);
+    border-color: #FFFFFF;
+    transition: all 300ms ease-out;
 }
 
-.circle-uiux #core-uiux {
+.circle #core {
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0,0,0,0);
     animation: orbit 7s linear infinite;
     opacity: 0%;
     transition: all 300ms ease-in;
 }
 
-.circle-uiux:hover #core-uiux {
+.circle:hover #core {
     transition: all 300ms ease-out;
     opacity: 100%;
 }
 
-.circle-uiux:hover {
+.circle:hover #circle-text {
     cursor: pointer;
-    background-color: aqua;
-    border: 7px solid #FFFFFF;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
     transition: all 300ms ease-out;
 }
 
-.circle-uiux:hover #text-uiux {
-    cursor: pointer;
-    color: #FFFFFF;
-    font-size: 30px;
-    font-size: 30px;
+#circle-text{
+    color: #000000;
+    font-family: 'Montserrat';
+    font-size: 1.8vw;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-    transition: all 300ms ease-out;
+    transition: all 300ms ease-in;
+}
+
+#core-div {
+    position: absolute;
+    width: 5.5vw;
+    height: 5.5vw;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: .3vw solid #FFFFFF;
+    animation: orbit 7s linear reverse infinite;
+    transition: all 500ms ease-in;
+}
+
+#core-text {
+    font-family: 'Montserrat';
+    font-size: 1.5vw;
+    color: #FFFFFF;
+    line-height: 5.5vw;
+}
+
+.circle-uiux {
+    width: 9vw;
+    height: 9vw;
+    margin-top: 1.5vw;
+    margin-left: 24vw;
+}
+
+.circle-uiux span {
+    line-height: 9vw;
+}
+
+.vic {
+    bottom: 25%;
+    right: 12vw;
+    transform-origin: calc(200px,50%);
+    background: linear-gradient(114.33deg, #e44c3e 0%, #292173 99.01%);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), inset 1px 1px 5px #000000;
+}
+
+.mal {
+    bottom: 25%;
+    left: 12vw;
+    transform-origin: calc(200px,50%);
+    background: linear-gradient(114.33deg, #004cff 0%, #004cff 99.01%);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), inset 1px 1px 5px #000000;
 }
 
 .circle-frontend {
-    width: 200px;
-    height: 200px;
-    background-color: rgb(255, 255, 255);
-    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    border: 10px solid #000000;
-    margin-top: 300px;
-    margin-left: -110px;
-    position: absolute;
-    text-align: center;
-    transition: all 300ms ease-in;
+    width: 12vw;
+    height: 12vw;
+    margin-top: 15vw;
+    margin-left: -7vw;
 }
 
-.circle-frontend #text-fe {
-    color: #000000;
-    font-family: 'Montserrat';
-    font-size: 30px;
-    line-height: 190px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-    transition: all 300ms ease-in;
-}
-.circle-frontend #core-frontend{
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0, 0);
-    opacity: 0%;
-    border-radius: 50%;
-    transition: all 300ms ease-in;
-    animation: orbit 7s linear infinite;
+.circle-frontend span {
+    line-height: 12vw;
 }
 
-.circle-frontend:hover #core-frontend{ 
-    transition: all 300ms ease-out;
-    opacity: 100%;
-}
-
-.circle-frontend:hover {
-    cursor: pointer;
-    background-color: aqua;
-    border: 10px solid #FFFFFF;
-    transition: all 300ms ease-out;
-}
-
-.circle-frontend:hover #text-fe {
-    cursor: pointer;
-    color: #FFFFFF;
-    font-size: 30px;
-    line-height: 190px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-    transition: all 300ms ease-out;
-}
-
-.circle-backend {
-    width: 175px;
-    height: 175px;
-    background-color: rgb(255, 255, 255);
-    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    border: 8px solid #000000;
-    margin-top: 320px;
-    margin-left: 420px;
-    position: absolute;
-    text-align: center;
-    transition: all 300ms ease-in;
-}
-
-.circle-backend #text-be {
-    color: #000000;
-    font-family: 'Montserrat';
-    font-size: 30px;
-    line-height: 175px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-    transition: all 300ms ease-in;
-}
-
-.circle-backend #core-backend{
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0, 0);
-    animation: orbit 7s linear infinite;
-    opacity: 0%;
-    transition: all 300ms ease-in;
-}
-
-.circle-backend:hover #core-backend{ 
-    transition: all 300ms ease-out;
-    opacity: 100%;
-}
-
-.circle-backend:hover {
-    cursor: pointer;
-    background-color: aqua;
-    border: 8px solid #FFFFFF;
-    transition: all 300ms ease-out;
-}
-
-.circle-backend:hover #text-be {
-    cursor: pointer;
-    color: #FFFFFF;
-    font-size: 30px;
-    line-height: 175px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-    transition: all 300ms ease-out;
-}
-
-.fc {
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    border: 5px solid #FFFFFF;
-    animation: orbit 7s linear reverse infinite;
-    transition: all 300ms ease-in
-}
-
-.zka{
-    top: 40%;
-    right: 120%;
+.zka {
+    top: -75%;
+    right: 25%;
     background: linear-gradient(114.33deg, #ec005a 0%, #4c0086 99.01%);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 2px 2px 5px #000000;
 }
 
-.zka #fc-zka {
-    font-family: 'Montserrat';
-    font-size: 20px;
-    color: #FFFFFF;
-    line-height: 75px
-
-}
-
-.vno{
-    top: 90%;
-    left: 100%;
+.vno {
+    top: 75%;
+    left: 110%;
     background: linear-gradient(114.33deg, #c8c8c8 0%, #1b4d5f 99.01%);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 2px 2px 5px #000000;
 }
 
-.vno #fc-vno {
-    font-family: 'Montserrat';
-    font-size: 20px;
-    color: #FFFFFF;
-    line-height: 75px
-}
-
-.lee{
-    bottom: 100%;
-    left: 87.5%;
+.lee {
+    top: 75%;
+    left: -60%;
     background: linear-gradient(114.33deg, #9A8478 0%, #1E130C 99.01%);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 2px 2px 5px #000000;
 }
 
-.lee #fc-lee {
-    font-family: 'Montserrat';
-    font-size: 20px;
-    color: #FFFFFF;
-    line-height: 75px
+.circle-backend {
+    width: 11vw;
+    height: 11vw;
+    margin-top: 22vw;
+    margin-left: 20vw;
 }
 
-.bc {
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    border: 5px solid #FFFFFF;
-    animation: orbit 7s linear reverse infinite;
-    transition: all 300ms ease-in;
+.circle-backend span {
+    line-height: 11vw;
 }
 
-.mik{
+.mik {
     bottom: 25%;
-    left: 200px;
+    left: 14vw;
     transform-origin: calc(200px,50%);
     background: linear-gradient(114.33deg, #ff0000 0%, #00005f 99.01%);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 2px 2px 5px #000000;
 }
 
-.mik #bc-mik {
-    font-family: 'Montserrat';
-    font-size: 20px;
-    color: #FFFFFF;
-    line-height: 75px
-}
-
-.lim{
+.lim {
     bottom: 25%;
-    right: 200px;
+    right: 14vw;
     background: linear-gradient(114.33deg, #00eaff 0%, #004869 99.01%);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 2px 2px 5px #000000;
 }
-
-.lim #bc-lim {
-    font-family: 'Montserrat';
-    font-size: 20px;
-    color: #FFFFFF;
-    line-height: 75px
-}
-
-.uc {
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    border: 5px solid #FFFFFF;
-    animation: orbit 7s linear reverse infinite;
-    transition: all 500ms ease-in;
-}
-
-.vic{
-    bottom: 25%;
-    right: 175px;
-    transform-origin: calc(200px,50%);
-    background: linear-gradient(114.33deg, #e44c3e 0%, #292173 99.01%);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 2px 2px 5px #000000;
-}
-
-.vic #uc-vic {
-    font-family: 'Montserrat';
-    font-size: 20px;
-    color: #FFFFFF;
-    line-height: 75px
-    
-}
-
-.mal{
-    bottom: 25%;
-    left: 175px;
-    transform-origin: calc(200px,50%);
-    background: linear-gradient(114.33deg, #004cff 0%, #004cff 99.01%);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 2px 2px 5px #000000;
-}
-
-.mal #uc-mal {
-    font-family: 'Montserrat';
-    font-size: 20px;
-    color: #FFFFFF;
-    line-height: 75px
-}
-
 
 @keyframes orbit {
     0% {
@@ -386,10 +244,52 @@ body{
     }
 }
 
-.popup-modal {
-width: 1440px;
-  height: 700px;
+.bg-card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
 }
+
+.close {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 10vw;
+    font-weight: 900;
+    width: fit-content;
+    height: fit-content;
+    line-height: 0.5;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    text-shadow: 0px 0px 25px #FFFFFF;
+}
+
+#card {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.socmed {
+    position: absolute;
+    z-index: 1;
+}
+
+/* .popup-modal {
+    width: 1440px;
+    height: 700px;
+}
+
 .popup-modal #popup-frontend{
     position: absolute;
     top: 0%;
@@ -626,4 +526,4 @@ width: 1440px;
     margin-bottom: 25px;
     margin-left: 550px;
     margin-top: 420px;
-}
+} */
