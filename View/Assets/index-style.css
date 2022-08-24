@@ -304,6 +304,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .msg-example p:before {
+    overflow-x: hidden;
     content: "";
     position: absolute;
     top: 0;
