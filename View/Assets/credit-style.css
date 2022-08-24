@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&display=swap');
 
 body{
     background-image: url("material/background.jpg");
     background-size: cover;
-    overflow: hidden;  
+    font-family: 'Montserrat';
+    overflow: hidden;
+    user-select: none;
 }
 
 a {
@@ -31,7 +33,6 @@ a {
 
 .back-button #text {
     color: #FFFFFF;
-    font-family: 'Montserrat';
     font-size: 1.8vw;
     line-height: 3.5vw;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
@@ -126,8 +127,8 @@ a {
 
 #circle-text{
     color: #000000;
-    font-family: 'Montserrat';
     font-size: 1.8vw;
+    font-weight: 700;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
     transition: all 300ms ease-in;
 }
@@ -144,8 +145,8 @@ a {
 }
 
 #core-text {
-    font-family: 'Montserrat';
     font-size: 1.5vw;
+    font-weight: 700;
     color: #FFFFFF;
     line-height: 5.5vw;
 }
@@ -253,15 +254,16 @@ a {
     z-index: 2;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    display: flex;
+    background-color: rgba(0, 0, 0, .90);
+    display: none;
 }
 
 .close {
     position: absolute;
     color: #FFFFFF;
-    font-size: 10vw;
-    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8vw;
+    font-weight: 500;
     width: fit-content;
     height: fit-content;
     line-height: 0.5;
@@ -270,260 +272,149 @@ a {
     text-shadow: 0px 0px 25px #FFFFFF;
 }
 
-#card {
-    position: relative;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.close:hover {
+    cursor: pointer;
+}
+
+.title-card {
+    position: absolute;
+    top: 4vw;
+    right: 4vw;
+    font-size: 3.2vw;
+    color: #FFFFFF;
+    font-weight: 900;
+    text-shadow: .4vw .4vw 25px rgba(0, 0, 0, 0.5), 0px 0px 3vw rgba(250, 250, 250, 0.5);
+}
+
+.card {
+    filter: drop-shadow(.5vw .5vw 10px rgba(0, 0, 0, 0.25));
+}
+
+.card img {
     width: 100%;
     height: 100%;
 }
 
 .socmed {
     position: absolute;
-    z-index: 1;
+    bottom: 1.2vw;
+    right: 1.2vw;
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
 }
 
-/* .popup-modal {
-    width: 1440px;
-    height: 700px;
+.socmed .btn {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 2.7vw;
+    height: 2.7vw;
+    margin-left: 1vw;
+    border-width: .3vw;
+    border-style: solid;
+    border-radius: 100%;
 }
 
-.popup-modal #popup-frontend{
-    position: absolute;
-    top: 0%;
-    left: 0;
-    background: rgba(0, 0, 0, 0.95);
-    height: 100%;
+.socmed .btn img:not(.gh img) {
+    margin: auto;
+}
+
+.ig { 
+    border-color: #E25B5B;
+    box-shadow: .2vw .2vw 10px rgba(226, 91, 91, 0.5), inset .2vw .2vw 10px rgba(255, 255, 255, 0.25);
+}
+
+.ig img {
+    width: 1.5vw;
+}
+
+.gh {
+    border-color: #303030;
+    box-shadow: .2vw .2vw 10px rgba(48, 48, 48, 0.5), inset 5px 5px 10px rgba(255, 255, 255, 0.25);
+}
+
+.gh img {
+    width: 1.8vw;
+    margin: .3vw auto;
+}
+
+.li {
+    border-color: #0A66C2;
+    box-shadow: .2vw .2vw 10px rgba(10, 102, 194, 0.5), inset 5px 5px 10px rgba(255, 255, 255, 0.25);
+}
+
+.li img {
+    width: 1.6vw;
+}
+
+.lt {
+    border-color: #4ECB71;
+    box-shadow: .2vw .2vw 10px rgba(78, 203, 113, 0.5), inset 5px 5px 10px rgba(255, 255, 255, 0.25);
+}
+
+.lt img {
+    width: 1.8vw;
+}
+
+.fe-card {
     width: 100%;
-    z-index: 100;
+    height: 100%;
     display: none;
 }
 
-.popup-modal #popup-frontend span{
+.fe-card .card:not(:nth-child(4)) {
+    margin: calc((100vh - (15vw * 2)) / 3) 15vw 0;
+    width: 25vw;
+    height: 15vw;
+}
+
+.fe-card .card:nth-child(4) {
     position: absolute;
-    cursor: pointer;
     top: 0;
-    left: 50px;
-    font-size: 100px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #FFFFFF;
-    background-color: rgb(255, 255, 255, 0);
-    border: 5px solid rgb(255, 255, 255, 0);
-    text-align: center;
-    z-index: 100;
+    right: 0;
+    width: 30vw;
+    height: 18vw;
+    margin: calc((100vh - 18vw) / 2) 15vw;
 }
 
-.popup-modal #popup-frontend #popup-backBtn span{
-    background-color: rgb (0,0,0,0);
-}
-.popup-modal #popup-frontend #grouptag span{
-    cursor: default;
-    top: 10px;
-    left: 900px;
-    font-size: 75PX;
-}
-
-#ig-img {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    border-radius: 0%;
-    width: 25px;
-    height: 25px;
+.fe-otech-logo {
     position: absolute;
-    margin: 0 auto;
+    bottom: 12vh;
+    right: 25vw;
 }
 
-.popup-modal #popup-frontend #dylee img{
-    margin-top: 240px;
-    position: absolute;
-    left: 100px;
-    width: 720px;
-}
-
-.popup-modal #popup-frontend  #ig-buttondylee {
-    background-color: #FFFFFF;
-    border: 4px solid #E25B5B;
-    box-shadow: var(--igBS_b);
-    display: flex;
-    height: 45px;
-    width: 45px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    border-radius: 50%;
-    margin-bottom: 25px;
-    margin-left: 540px;
-    margin-top: 615px;
-}
-
-.popup-modal #popup-frontend #deva img{
-    margin-top: -110px;
-    position: absolute;
-    left: 100px;
-    width: 720px;
-}
-.popup-modal #popup-frontend  #ig-buttondeva {
-    background-color: #FFFFFF;
-    border: 4px solid #E25B5B;
-    box-shadow: var(--igBS_b);
-    display: flex;
-    height: 45px;
-    width: 45px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    border-radius: 50%;
-    margin-bottom: 25px;
-    margin-left: 540px;
-    margin-top: 260px;
-}
-
-.popup-modal #popup-frontend #azka img{
-    width: 820px;
-    top: 80px;
-    left: 600px;
+.logo-card {
     position: absolute;
 }
 
-.popup-modal #popup-frontend  #ig-buttonazka {
-    background-color: #FFFFFF;
-    border: 4px solid #E25B5B;
-    box-shadow: var(--igBS_b);
-    display: flex;
-    height: 45px;
-    width: 45px;
-    justify-content: center;
-    position: absolute;
-    border-radius: 50%;
-    margin-bottom: 25px;
-    margin-left: 1240px;
-    margin-top: 515px;
+.logo-card img {
+    width: 10vw;
+    filter: drop-shadow(.5vw .5vw 10px rgba(0, 0, 0, 0.5)) drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.25));
 }
 
-.popup-modal #popup-backend{
-    position: absolute;
-    top: 0%;
-    left: 0;
-    background: rgba(0, 0, 0, 0.95);
-    height: 100%;
-    width: 100%;
-    z-index: 100;
+.be-card {
     display: none;
 }
-.popup-modal #popup-backend span{
-    position: absolute;
-    cursor:pointer;
-    top: 0;
-    left: 50px;
-    font-size: 100px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #FFFFFF;
-    background-color: rgb(255, 255, 255, 0);
-    border: 5px solid rgb(255, 255, 255, 0);
-    text-align: center;
-    z-index: 100;
-}
-.popup-modal #popup-backend #popup-backBtn span{
-    background-color: rgb 0,0,0,0;
-}
-.popup-modal #popup-backend #grouptag span{
-    top: 15px;
-    left: 800px;
-    font-size: 75PX;
-    cursor: default;
-}
-.popup-modal #popup-backend img{
-    position: absolute;
-    left: 5%;
-    width: 720px;
-}
-.popup-modal #popup-backend #talim img{
-    top: 25px;
-    left: 100px;
-    width: 800px;
-}
-.popup-modal #popup-backend #mikail img{
-    top: 25px;
-    left: 600px;
-    width: 800px;
-}
-.popup-modal #popup-uiux{
-    position: absolute;
-    top: 0%;
-    left: 0;
-    background: rgba(0, 0, 0, 0.95);
-    height: 100%;
-    width: 100%;
-    z-index: 100;
+
+.ui-card {
     display: none;
 }
-.popup-modal #popup-uiux span{
-    position: absolute;
-    cursor:pointer;
-    top: 0;
-    left: 50px;
-    font-size: 100px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #FFFFFF;
-    background-color: rgb(255, 255, 255, 0);
-    border: 5px solid rgb(255, 255, 255, 0);
-    text-align: center;
-    z-index: 100;
-}
-.popup-modal #popup-uiux #popup-backBtn span{
-    background-color: rgb 0,0,0,0;
-}
-.popup-modal #popup-uiux #grouptag span{
-    top: 10px;
-    left: 900px;
-    font-size: 75px;
-    cursor: default;
+
+.be-card, .ui-card {
+    width: 100%;
+    height: 100%;
 }
 
-.popup-modal #popup-uiux #calzy img{
-    top: 25px;
-    left: 100px;
-    width: 800px;
-    position: absolute;
-    width: 720px;
+.be-card .card, .ui-card .card {
+    width: 30vw;
+    height: 18vw;
+    float: left;
+    margin-top: calc((100vh - 18vw)/2);
+    margin-left: calc((100vw - (30vw * 2)) / 3);
 }
-.popup-modal #popup-uiux #adit img{
-    top: 25px;
-    left: 600px;
-    width: 800px;
-    position: absolute;
-    width: 720px;
+
+.beui-otech-logo {
+    bottom: 12vh;
+    right: 45vw;
 }
-.popup-modal #popup-uiux  #ig-buttonadit {
-    background-color: #FFFFFF;
-    border: 4px solid #E25B5B;
-    box-shadow: var(--igBS_b);
-    display: flex;
-    height: 45px;
-    width: 45px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    border-radius: 50%;
-    margin-bottom: 25px;
-    margin-left: 1190px;
-    margin-top: 420px;
-}
-.popup-modal #popup-uiux  #ig-buttonakmal {
-    background-color: #FFFFFF;
-    border: 4px solid #E25B5B;
-    box-shadow: var(--igBS_b);
-    display: flex;
-    height: 45px;
-    width: 45px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    border-radius: 50%;
-    margin-bottom: 25px;
-    margin-left: 550px;
-    margin-top: 420px;
-} */
