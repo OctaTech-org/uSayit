@@ -432,6 +432,7 @@ a {
     body {
         overflow: auto;
         overflow-x: hidden;
+        height: 225vw;
     }
 
     body::-webkit-scrollbar {
