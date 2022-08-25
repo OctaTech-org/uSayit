@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/credit-style.css">
-    <title>Contributor</title>
+    <link rel ="icon" href ="Assets/material/usayit-icon.png" type = "image/x-icon">
+    <title>uSayit | Credits</title>
 </head>
 <body>
     <div class="container">
         <a href="index.html">
             <div class="back-button"><span id="text">< BACK</span></div>
+        </a>
+
+        <a href="index.html">
+            <div class="home-button"><img src="Assets/material/home.png"></div>
         </a>
          
         <div class="circle-otech">
@@ -118,27 +123,225 @@
     </div>
 
     <script>
-            document.querySelector('.circle-uiux').addEventListener('click', function(){
-                document.querySelector('.bg-card').style.display = 'block';
-                document.querySelector('.ui-card').style.display = 'block';
+
+        let body = document.querySelector('body');
+        let uiuxCircle = document.querySelector('.circle-uiux');
+        let uiuxText = document.querySelector('.circle-uiux #circle-text');
+        let uiuxClick = false;
+        let feCircle = document.querySelector('.circle-frontend');
+        let feText = document.querySelector('.circle-frontend #circle-text');
+        let feClick = false;
+        let beCircle = document.querySelector('.circle-backend');
+        let beText = document.querySelector('.circle-backend #circle-text');
+        let beClick = false;
+        let bgCard = document.querySelector('.bg-card');
+        let uiuxCard = document.querySelector('.ui-card');
+        let feCard = document.querySelector('.fe-card');
+        let beCard = document.querySelector('.be-card');
+
+        if (window.screen.availWidth <= 575) {
+
+            uiuxCircle.addEventListener('click', function(){
+
+                uiuxCircle.style.marginTop = '95vw';
+                uiuxCircle.style.marginLeft = '41vw';
+                uiuxCircle.style.width = '15vw';
+                uiuxCircle.style.height = '15vw';
+                uiuxText.style.lineHeight = '15vw';
+                uiuxText.style.fontSize = '2.5vw';
+                if (uiuxClick === false ) {
+                    body.style.height = '170vw';
+                    uiuxCircle.style.background = 'linear-gradient(115.08deg, #75FFF7 0%, #002966 100%)';
+                    uiuxCircle.style.borderColor = '#FFFFFF';
+                    uiuxText.style.color = '#FFFFFF';
+                    uiuxCard.style.display = 'block';
+                    uiuxClick = true;
+                } else {
+                    body.style.height = 'auto';
+                    uiuxCircle.style.background = '#FFFFFF';
+                    uiuxCircle.style.borderColor = '#000000';
+                    uiuxText.style.color = '#000000';
+                    uiuxCard.style.display = 'none';
+                    uiuxClick = false;
+                }
+
+                feCircle.style.marginTop = '85vw';
+                feCircle.style.marginLeft = '70vw';
+                feCircle.style.width = '13vw';
+                feCircle.style.height = '13vw';
+                feText.style.lineHeight = '13vw';
+                feText.style.fontSize = '2.3vw';
+                if (feClick === true) {
+                    feCircle.style.background = '#FFFFFF';
+                    feCircle.style.borderColor = '#000000';
+                    feText.style.color = '#000000';
+                }
+                feClick = false;
+
+                beCircle.style.marginTop = '85vw';
+                beCircle.style.marginLeft = '13vw';
+                beCircle.style.width = '13vw';
+                beCircle.style.height = '13vw';
+                beText.style.lineHeight = '13vw';
+                beText.style.fontSize = '2.3vw';
+                if (beClick === true) {
+                    beCircle.style.background = '#FFFFFF';
+                    beCircle.style.borderColor = '#000000';
+                    beText.style.color = '#000000';
+                }
+                beClick = false;
+
+                bgCard.style.display = 'block';
+                feCard.style.display = 'none';
+                beCard.style.display = 'none';
+                
             });
 
-            document.querySelector('.circle-frontend').addEventListener('click', function(){
-                document.querySelector('.bg-card').style.display = 'block';
-                document.querySelector('.fe-card').style.display = 'block';
+            feCircle.addEventListener('click', function(){
+
+                feCircle.style.marginTop = '95vw';
+                feCircle.style.marginLeft = '41vw';
+                feCircle.style.width = '15vw';
+                feCircle.style.height = '15vw';
+                feText.style.lineHeight = '15vw';
+                feText.style.fontSize = '2.5vw';
+                if (feClick === false ) {
+                    body.style.height = '225vw';
+                    feCircle.style.background = 'linear-gradient(115.08deg, #FF008A 14.83%, #002966 100%)';
+                    feCircle.style.borderColor = '#FFFFFF';
+                    feText.style.color = '#FFFFFF';
+                    feCard.style.display = 'block';
+                    feClick = true;
+                } else {
+                    body.style.height = 'auto';
+                    feCircle.style.background = '#FFFFFF';
+                    feCircle.style.borderColor = '#000000';
+                    feText.style.color = '#000000';
+                    feCard.style.display = 'none';
+                    feClick = false;
+                }
+
+                beCircle.style.marginTop = '85vw';
+                beCircle.style.marginLeft = '70vw';
+                beCircle.style.width = '13vw';
+                beCircle.style.height = '13vw';
+                beText.style.lineHeight = '13vw';
+                beText.style.fontSize = '2.3vw';
+                if (beClick === true) {
+                    beCircle.style.background = '#FFFFFF';
+                    beCircle.style.borderColor = '#000000';
+                    beText.style.color = '#000000';
+                }
+                beClick = false;
+
+                uiuxCircle.style.marginTop = '85vw';
+                uiuxCircle.style.marginLeft = '13vw';
+                uiuxCircle.style.width = '13vw';
+                uiuxCircle.style.height = '13vw';
+                uiuxText.style.lineHeight = '13vw';
+                uiuxText.style.fontSize = '2.3vw';
+                if (uiuxClick === true) {
+                    uiuxCircle.style.background = '#FFFFFF';
+                    uiuxCircle.style.borderColor = '#000000';
+                    uiuxText.style.color = '#000000';
+                }
+                uiuxClick = false;
+
+                bgCard.style.display = 'block';
+                uiuxCard.style.display = 'none';
+                beCard.style.display = 'none';
+                
             });
             
-            document.querySelector('.circle-backend').addEventListener('click', function(){
-                document.querySelector('.bg-card').style.display = 'block';
-                document.querySelector('.be-card').style.display = 'block';
+            beCircle.addEventListener('click', function(){
+
+                beCircle.style.marginTop = '95vw';
+                beCircle.style.marginLeft = '41vw';
+                beCircle.style.width = '15vw';
+                beCircle.style.height = '15vw';
+                beText.style.lineHeight = '15vw';
+                beText.style.fontSize = '2.5vw';
+                if (beClick === false ) {
+                    body.style.height = '170vw';
+                    beCircle.style.background = 'linear-gradient(115.08deg, #6EA200 0%, #002966 100%)';
+                    beCircle.style.borderColor = '#FFFFFF';
+                    beText.style.color = '#FFFFFF';
+                    beCard.style.display = 'block';
+                    beClick = true;
+                } else {
+                    body.style.height = 'auto';
+                    beCircle.style.background = '#FFFFFF';
+                    beCircle.style.borderColor = '#000000';
+                    beText.style.color = '#000000';
+                    beCard.style.display = 'none';
+                    beClick = false;
+                }
+
+                uiuxCircle.style.marginTop = '85vw';
+                uiuxCircle.style.marginLeft = '70vw';
+                uiuxCircle.style.width = '13vw';
+                uiuxCircle.style.height = '13vw';
+                uiuxText.style.lineHeight = '13vw';
+                uiuxText.style.fontSize = '2.3vw';
+                if (uiuxClick === true) {
+                    uiuxCircle.style.background = '#FFFFFF';
+                    uiuxCircle.style.borderColor = '#000000';
+                    uiuxText.style.color = '#000000';
+                }
+                uiuxClick = false;
+
+                feCircle.style.marginTop = '85vw';
+                feCircle.style.marginLeft = '13vw';
+                feCircle.style.width = '13vw';
+                feCircle.style.height = '13vw';
+                feText.style.lineHeight = '13vw';
+                feText.style.fontSize = '2.3vw';
+                if (feClick === true) {
+                    feCircle.style.background = '#FFFFFF';
+                    feCircle.style.borderColor = '#000000';
+                    feText.style.color = '#000000';
+                }
+                feClick = false;
+
+                bgCard.style.display = 'block';
+                uiuxCard.style.display = 'none';
+                feCard.style.display = 'none';
+
+            });
+
+        } else {
+
+            uiuxCircle.addEventListener('click', function(){
+
+                bgCard.style.display = 'block';
+                uiuxCard.style.display = 'block';
+
+            });
+
+            feCircle.addEventListener('click', function(){
+
+                bgCard.style.display = 'block';
+                feCard.style.display = 'block';
+
+            });
+
+            beCircle.addEventListener('click', function(){
+
+                bgCard.style.display = 'block';
+                beCard.style.display = 'block';
+
             });
 
             document.querySelector('.close').addEventListener('click', function(){
-                document.querySelector('.bg-card').style.display = 'none';
-                document.querySelector('.fe-card').style.display = 'none';
-                document.querySelector('.be-card').style.display = 'none';
-                document.querySelector('.ui-card').style.display = 'none';
+
+                bgCard.style.display = 'none';
+                feCard.style.display = 'none';
+                beCard.style.display = 'none';
+                uiuxCard.style.display = 'none';
+
             });
+
+        }
     </script>
 </body>
 </html>

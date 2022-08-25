@@ -17,6 +17,10 @@ a {
     height: 100vh;
 }
 
+.home-button {
+    display: none;
+}
+
 .back-button {
     background-color: white;
     width: 10vw;
@@ -125,7 +129,7 @@ a {
     transition: all 300ms ease-out;
 }
 
-#circle-text{
+#circle-text {
     color: #000000;
     font-size: 1.8vw;
     font-weight: 700;
@@ -174,7 +178,7 @@ a {
     bottom: 25%;
     left: 12vw;
     transform-origin: calc(200px,50%);
-    background: linear-gradient(114.33deg, #004cff 0%, #004cff 99.01%);
+    background: linear-gradient(115.08deg, #3FA3FF 0%, #0060F0 100%);
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), inset 1px 1px 5px #000000;
 }
 
@@ -417,4 +421,213 @@ a {
 .beui-otech-logo {
     bottom: 12vh;
     right: 45vw;
+}
+
+@media (max-width: 575px) {
+
+    * {
+        cursor: default;
+    }
+
+    body {
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    body::-webkit-scrollbar {
+        width: 0.3vw;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background-color: #6a1470;
+        border-radius: 3px;
+    }
+
+    .container {
+        overflow-x: hidden;
+    }
+
+    .back-button {
+        display: none;
+    }
+
+    .home-button {
+        position: absolute;
+        top: 2vw;
+        left: calc(50% - 3.5vw);
+        z-index: 1;
+        display: block;
+    }
+
+    .home-button img {
+        width: 7vw;
+        filter: invert(1);
+    }
+
+    .circle-otech {
+        top: -60vw;
+        left: -1vw;
+        width: 100vw;
+        height: 100vw;
+        margin: 0;
+        box-shadow: .5vw .5vw 10px rgba(0, 0, 0, 0.5), inset .5vw .5vw 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .otech-logo {
+        top: 65vw;
+    }
+
+    .otech-logo img {
+        width: 15vw;
+    }
+
+    .circle {
+        border-width: .8vw;
+        background-color: #FFFFFF;
+    }
+    
+    .circle:hover {
+        cursor: default;
+        background: #FFFFFF;
+        border-color: #000000;
+        backdrop-filter: none;
+    }
+
+    .circle:hover #circle-text {
+        cursor: default;
+        color: #000000;
+    }
+
+    .circle #core {
+        display: none;
+    }
+
+    .circle-uiux {
+        margin-top: 85vw;
+        margin-left: 13vw;
+        width: 13vw;
+        height: 13vw;
+    }
+
+    .circle-uiux #circle-text {
+        line-height: 13vw;
+        font-size: 2.5vw;
+    }
+
+    .circle-frontend {
+        margin-top: 95vw;
+        margin-left: 41vw;
+        width: 15vw;
+        height: 15vw;
+    }
+    
+    .circle-frontend #circle-text {
+        line-height: 15vw;
+        font-size: 2.5vw;
+    }
+
+    .circle-backend {
+        margin-top: 85vw;
+        margin-left: 70vw;
+        width: 13vw;
+        height: 13vw;
+    }
+
+    .circle-backend #circle-text {
+        line-height: 13vw;
+        font-size: 2.3vw;
+    }
+
+    .bg-card {
+        z-index: -1;
+        height: fit-content;
+        background: none;
+        display: none;
+    }
+    
+    .close {
+        display: none;
+    }
+    
+    .title-card {
+        display: none;
+    }
+
+    .card {
+        transition: all 300ms ease-out;
+    }
+    
+    .socmed {
+        bottom: 4vw;
+        right: 4vw;
+    }
+    
+    .socmed .btn {
+        width: 8vw;
+        height: 8vw;
+        margin-left: 4vw;
+        border-width: .7vw;
+    }
+    
+    .ig img {
+        width: 4vw;
+    }
+    
+    .gh img {
+        width: 5vw;
+        margin-top: 1.1vw;
+    }
+    
+    .li img {
+        width: 4.5vw;
+    }
+    
+    .lt img {
+        width: 5.2vw;
+    }
+    
+    .fe-card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .fe-card .card:nth-child(2) {
+        margin: 115vw 10vw 0;
+        width: 80vw;
+        height: 45vw;
+    }
+
+    .fe-card .card:nth-child(3) {
+        width: 80vw;
+        height: 45vw;
+        margin: 10vw 10vw 10vw;
+    }
+    
+    .fe-card .card:nth-child(4) {
+        position: absolute;
+        width: 80vw;
+        height: 45vw;
+        margin: 60vw 10vw;
+    }
+    
+    .logo-card {
+        display: none;
+    }
+    
+    .be-card .card, .ui-card .card {
+        width: 80vw;
+        height: 45vw;
+        float: none;
+        margin: 0;
+    }
+
+    .be-card #mikail-card, .ui-card #adit-card {
+        position: absolute;
+        margin: 60vw 10vw 0;
+    }
+
+    .be-card #talim-card, .ui-card #calzy-card {
+        position: absolute;
+        margin: 115vw 10vw 10vw;
+    }
 }
