@@ -40,17 +40,16 @@
 <h2>uSayit Teams:</h2>
 
 - <h3>Back-End Developer</h3>
-    - <br>
-    - <br>
-    - <br>
+    - <a href="https://github.com/Asadaaaaa">Mik</a> (BE-Lead)<br>
+    - <a href="https://github.com/ta-lim">Lim</a><br>
     
 - <h3>Front-End Developer</h3>
-    - <br>
-    - <br>
-    - <br>
+    - <a href="https://github.com/zkazharan">Zka</a> (FE-Lead)<br>
+    - <a href="https://github.com/InnakaDylee">Dyl</a><br>
+    - <a href="https://github.com/vanosyma">Vno</a><br>
  
 - <h3>UI/UX Designer</h3>
-    - <br>
-    - <br>
+    - <a href="https://github.com/victoryusei">Vic</a> (UI-Lead)<br>
+    - Mal<br>
 
 <p align="center">uSayit | 2022</p>
