@@ -433,6 +433,7 @@ a {
         overflow: auto;
         overflow-x: hidden;
         height: 225vw;
+        padding: 0;
     }
 
     body::-webkit-scrollbar {
@@ -445,6 +446,11 @@ a {
     }
 
     .container {
+        height: inherit;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
         overflow-x: hidden;
     }
 
@@ -547,6 +553,7 @@ a {
     }
     
     .close {
+        position: absolute;
         display: none;
     }
     
