@@ -199,7 +199,7 @@
 
             await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(res => userIp = res.ip);
 
-            await fetch('http://usayit-api.otech.id/api/sendFeedback', {
+            await fetch('http://usayit-api.otech.id:3000/api/sendFeedback', {
 
                 method: 'POST',
                 headers: {
