@@ -387,7 +387,7 @@ const igContentPrev = async () => {
             continue;
         }
 
-        await fetch('https://usayit-api.otech.id/api/igPreview', {
+        await fetch('http://usayit-api.otech.id/api/igPreview', {
 
             method: 'POST',
             headers: {
@@ -430,7 +430,7 @@ postButton.addEventListener('click', async () => {
 
     await fetch('https://api.ipify.org?format=json').then(res => res.json()).then(res => userIp = res.ip);
 
-    await fetch('https://usayit-api.otech.id/api/sendMessage', {
+    await fetch('http://usayit-api.otech.id/api/sendMessage', {
 
         method: 'POST',
         headers: {
